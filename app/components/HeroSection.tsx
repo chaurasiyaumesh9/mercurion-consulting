@@ -59,6 +59,12 @@ export default function HeroSection() {
               <p>✔ 10+ Years Frontend Engineering Experience</p>
               <p>✔ Enterprise Production Systems</p>
               <p>✔ Distributed & Global Team Collaboration</p>
+              <p className="mt-6 text-gray-700 leading-relaxed max-w-2xl">
+                Available for hire as a Senior Angular Consultant, Enterprise Angular Developer, or Frontend Architecture Consultant. I support global
+                organizations with Angular migration, performance optimization,
+                and enterprise frontend modernization through remote consulting
+                and contract engagements.
+              </p>
             </div>
 
             {/* CTA */}

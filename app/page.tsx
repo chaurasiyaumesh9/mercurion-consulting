@@ -6,6 +6,7 @@ import { CaseStudies } from "./components/CaseStudies";
 import { ConsultingApproach } from "./components/ConsultingApproach";
 import { Blog } from "./components/Blog";
 import { Contact } from "./components/Contact";
+import { HireSection } from "./components/HireSection";
 
 export default function Home() {
   return (
@@ -13,10 +14,11 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Expertise />
-      <ConsultingServices />
+      <ConsultingServices />      
       <CaseStudies />
       <ConsultingApproach />
       {/* <Blog /> */}
+      {/* <HireSection /> */}
       <Contact />
     </div>
   );

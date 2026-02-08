@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import {
+  faqStructuredData,
+  personStructuredData,
+  serviceStructuredData,
+} from "./lib/structuredData";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +16,16 @@ export const metadata: Metadata = {
   description:
     "Senior Angular consultant helping global organizations modernize legacy Angular applications, improve frontend performance, and scale enterprise web platforms. Specializing in Angular migration, performance optimization, and enterprise frontend architecture.",
   keywords: [
+    "Hire Angular Developer",
+    "Hire Angular Consultant",
+    "Hire Senior Angular Developer",
+    "Hire Angular Contractor",
+    "Hire Angular Expert",
+    "Angular Consultant for Hire",
+    "Remote Angular Contractor",
+    "Enterprise Angular Architect Consultant",
+    "Angular Freelance Developer Hire",
+    "Angular Contract Developer Remote",
     "Angular Architect",
     "Angular Consultant",
     "Angular Lead",
@@ -22,11 +37,6 @@ export const metadata: Metadata = {
     "Angular Enterprise Applications",
     "Angular UI Architecture",
     "Frontend Architecture Consulting",
-    "Indian Consultant",
-    "Indian Technical Consultant",
-    "Technical Consultant",
-    "Remote Worker",
-    "Indian Remote Worker",
     "Enterprise Angular",
     "Frontend Performance",
     "Angular Architecture",
@@ -54,7 +64,6 @@ export const metadata: Metadata = {
     "Remote Angular Consultant",
     "Global Angular Consultant",
     "Enterprise Frontend Contractor",
-
     "Senior Angular Engineer",
     "Angular Technical Lead",
     "Angular Solution Consultant",
@@ -151,6 +160,26 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personStructuredData),
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceStructuredData),
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqStructuredData),
+          }}
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

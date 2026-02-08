@@ -7,24 +7,28 @@ export function ConsultingServices() {
       title: "Enterprise Angular Development & Platform Engineering",
       description:
         "Hands-on development and technical execution for large-scale Angular applications. Supporting enterprise frontend platforms, complex data workflows, scalable state management, and multi-team codebase environments.",
+      href: "/services/enterprise-angular-development",
     },
     {
       icon: GitBranch,
       title: "Angular Modernization & Frontend Migration",
       description:
         "Modernizing legacy AngularJS and older frontend architectures to modern Angular and scalable frontend platforms. Supporting migration strategy, dependency upgrades, codebase restructuring, and production-safe rollout execution.",
+        href: "/services/angular-migration-modernization",
     },
     {
       icon: Activity,
       title: "Frontend Performance Optimization & Runtime Stability",
       description:
         "Improving performance, scalability, and runtime reliability of enterprise frontend applications. Covering bundle optimization, rendering performance tuning, Core Web Vitals improvements, and production performance issue analysis.",
+        href: "/services/frontend-performance-optimization",
     },
     {
       icon: ShieldCheck,
       title: "Enterprise Frontend Delivery & Engineering Enablement",
       description:
         "Supporting engineering teams with code quality standards, CI/CD integration, release stability, debugging production issues, and improving frontend delivery workflows across distributed teams.",
+        href: "/services/frontend-delivery-enablement",
     },
   ];
 
@@ -93,7 +97,13 @@ export function ConsultingServices() {
                   max-w-xl md:max-w-2xl
                 "
                 >
-                  {service.description}
+                  {service.description}{" "}
+                  <a
+                    href={service.href}
+                    className="text-blue-600 font-medium hover:text-blue-700 transition whitespace-nowrap"
+                  >
+                    Know more →
+                  </a>
                 </p>
               </div>
             </div>
