@@ -1,6 +1,5 @@
 import { Navigation } from "./components/Navigation";
 import { Hero } from "./components/Hero";
-import { ExperienceAuthority } from "./components/ExperienceAuthority";
 import { Expertise } from "./components/Expertise";
 import { ConsultingServices } from "./components/ConsultingServices";
 import { CaseStudies } from "./components/CaseStudies";
@@ -13,7 +12,6 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Navigation />
       <Hero />
-      {/* <ExperienceAuthority /> */}
       <Expertise />
       <ConsultingServices />
       <CaseStudies />
