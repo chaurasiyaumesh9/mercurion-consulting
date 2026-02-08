@@ -13,7 +13,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Navigation />
       <Hero />
-      <ExperienceAuthority />
+      {/* <ExperienceAuthority /> */}
       <Expertise />
       <ConsultingServices />
       <CaseStudies />

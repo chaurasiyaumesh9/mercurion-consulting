@@ -21,7 +21,7 @@ export function Contact() {
             </a>
             <div className="hidden md:block w-px h-6 bg-[#475569]"></div>
             <a 
-              href="https://linkedin.com/in/umeshchaurasiya"
+              href="https://www.linkedin.com/in/uc1990/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 text-white hover:text-[#60A5FA] transition-colors text-base"
