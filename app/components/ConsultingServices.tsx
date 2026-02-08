@@ -29,41 +29,70 @@ export function ConsultingServices() {
   ];
 
   return (
-    <section id="services" className="bg-white py-8">
-      <div className="max-w-7xl mx-auto px-8">
-        {/* Header */}
-        <div className="mb-8">
-          <h2 className="text-4xl tracking-tight mb-5 text-[#1E293B]">
+    <section id="services" className="bg-white py-14 md:py-20 scroll-mt-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        {/* HEADER */}
+        <div className="mb-10 md:mb-14 max-w-3xl">
+          <h2 className="text-3xl md:text-4xl text-[#1E293B] font-semibold leading-tight">
             Consulting Services
           </h2>
 
-          <p className="text-xl text-[#6B7280] max-w-2xl leading-relaxed">
+          <p className="mt-4 text-lg md:text-xl text-[#6B7280] leading-relaxed">
             Hands-on technical consulting and delivery support for enterprise
             Angular and frontend engineering teams.
           </p>
         </div>
 
-        {/* Editorial Split Blocks */}
+        {/* SERVICES LIST */}
         <div className="divide-y divide-slate-200">
           {services.map((service, index) => (
             <div
               key={index}
-              className="py-7 flex flex-col md:flex-row md:items-start gap-10"
+              className="py-8 md:py-10
+                         flex flex-col
+                         sm:flex-row
+                         gap-6 md:gap-10"
             >
-              {/* LEFT COLUMN — Icon + Title */}
-              <div className="md:w-1/3 flex items-start gap-5">
-                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                  <service.icon className="w-6 h-6 text-blue-600" />
+              {/* LEFT — ICON + TITLE */}
+              <div
+                className="
+                flex items-start gap-4
+                sm:w-[40%]
+                lg:w-[35%]
+              "
+              >
+                <div
+                  className="
+                  w-10 h-10 md:w-12 md:h-12
+                  rounded-xl
+                  bg-blue-50
+                  flex items-center justify-center
+                  shrink-0
+                "
+                >
+                  <service.icon className="w-5 h-5 md:w-6 md:h-6 text-blue-600" />
                 </div>
 
-                <h3 className="text-xl font-semibold text-[#1E293B] leading-snug">
+                <h3 className="text-lg md:text-xl font-semibold text-[#1E293B] leading-snug">
                   {service.title}
                 </h3>
               </div>
 
-              {/* RIGHT COLUMN — Description */}
-              <div className="md:w-2/3">
-                <p className="text-[#6B7280] leading-relaxed text-[16px] max-w-2xl">
+              {/* RIGHT — DESCRIPTION */}
+              <div
+                className="
+                sm:w-[60%]
+                lg:w-[65%]
+              "
+              >
+                <p
+                  className="
+                  text-[#6B7280]
+                  leading-relaxed
+                  text-[15px] md:text-[16px]
+                  max-w-xl md:max-w-2xl
+                "
+                >
                   {service.description}
                 </p>
               </div>

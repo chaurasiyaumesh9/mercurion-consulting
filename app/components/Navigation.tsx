@@ -7,7 +7,7 @@ export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    // { label: "About", href: "#about" },
+    { label: "About", href: "#about" },
     { label: "Expertise", href: "#expertise" },
     { label: "Services", href: "#services" },
     { label: "Case Studies", href: "#case-studies" },

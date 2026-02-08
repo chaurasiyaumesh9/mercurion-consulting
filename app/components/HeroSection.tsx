@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="bg-white">
+    <section id="about" className="bg-white scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-14 md:py-10">
-        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-14 lg:gap-16">
           {/* IMAGE — FIRST IN DOM (Mobile Trust + LCP) */}
-          <div className="flex justify-center md:justify-start shrink-0">
+          <div className="flex justify-center md:justify-start md:flex-[0.35] shrink-0">
             <div className="relative w-[200px] h-[240px] md:w-[280px] md:h-[340px]">
               <Image
                 src="/umesh-profile.jpg"
@@ -24,7 +24,7 @@ export default function HeroSection() {
           </div>
 
           {/* CONTENT */}
-          <div className="text-center md:text-left max-w-2xl">
+          <div className="text-center md:text-left md:flex-[0.65] max-w-3xl">
             {/* NAME */}
             <h1 className="text-3xl md:text-5xl font-semibold text-gray-900 leading-tight">
               Umesh Chaurasiya
