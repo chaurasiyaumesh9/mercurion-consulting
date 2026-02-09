@@ -1,28 +1,28 @@
 export function ConsultingApproach() {
   const steps = [
     {
-      phase: "01",
+      phase: "Discovery",
       title: "Technical Discovery & System Audit",
       description:
-        "Architecture review, codebase analysis, performance profiling, and identification of technical debt and stability risks. For new builds, includes requirements clarification and frontend platform foundation design.",
+        "I begin every engagement with a comprehensive technical assessment. This includes reviewing existing architecture, identifying performance bottlenecks, evaluating code quality, and understanding team capabilities. This phase establishes a clear baseline and identifies opportunities for improvement.",
     },
     {
-      phase: "02",
+      phase: "Planning",
       title: "Engineering Strategy & Roadmap Planning",
       description:
-        "Translate technical findings into a prioritized roadmap covering modernization opportunities, performance optimization strategy, architecture improvements, and phased delivery planning aligned with business timelines.",
+        "Based on discovery findings, I create a detailed technical roadmap with clear milestones, deliverables, and success metrics. This includes architecture decisions, technology stack recommendations, team structure proposals, and risk mitigation strategies. The plan ensures alignment between technical solutions and business objectives.",
     },
     {
-      phase: "03",
+      phase: "Development",
       title: "Implementation & Engineering Execution",
       description:
-        "Hands-on engineering contribution delivering improvements or new capabilities, including performance optimization, modernization, and frontend architecture implementation in collaboration with product teams.",
+        "Implementation follows agile methodologies with short iteration cycles, continuous integration, and regular stakeholder feedback. I establish coding standards, implement automated testing, set up CI/CD pipelines, and ensure code quality through reviews and pair programming. The focus is on building sustainable, maintainable solutions.",
     },
     {
-      phase: "04",
-      title: "Documentation, Knowledge Transfer & Stability",
+      phase: "Optimization",
+      title: "Performance Optimization, Knowledge Transfer & Training",
       description:
-        "Provide documentation, architectural decision records, and knowledge transfer to ensure teams can maintain and evolve the frontend platform independently after engagement.",
+        "The final phase focuses on optimization and knowledge transfer. I conduct performance audits, implement optimizations, and establish monitoring systems. Equally important is ensuring the team can maintain and evolve the solution through comprehensive documentation, training sessions, and ongoing mentorship.",
     },
   ];
 
@@ -30,16 +30,14 @@ export function ConsultingApproach() {
     <section id="approach" className="bg-white py-14 md:py-20 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         {/* HEADER */}
-        <div className="mb-12 md:mb-16 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#1E293B]">
-            Technical Delivery Approach
-          </h2>
-
-          <p className="mt-4 text-lg md:text-xl text-[#6B7280] leading-relaxed">
-            A structured, hands-on methodology for assessing, building,
-            modernizing, and scaling enterprise frontend applications.
-          </p>
-        </div>
+        <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              Technical Delivery Approach
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              A proven methodology for delivering high-quality frontend solutions on time and within budget
+            </p>
+          </div>
 
         {/* PHASE BLOCKS */}
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
@@ -48,13 +46,16 @@ export function ConsultingApproach() {
               key={index}
               className="bg-[#F9FAFB] border border-[#E5E7EB] rounded-xl p-6 md:p-8"
             >
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl font-bold text-blue-600">{index + 1}</span>
+                </div>
               {/* PHASE NUMBER */}
-              <div className="text-sm font-semibold text-blue-600 mb-3">
-                Phase {step.phase}
+              <div className="text-xl font-semibold text-slate-900 mb-2 mt-2">
+                {step.phase}
               </div>
 
               {/* TITLE */}
-              <h3 className="text-lg md:text-xl font-semibold text-[#1E293B] mb-3 leading-snug">
+              <h3 className="text-sm text-blue-600 font-medium mb-3">
                 {step.title}
               </h3>
 

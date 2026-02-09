@@ -1,4 +1,4 @@
-import { Boxes, GitBranch, Activity, ShieldCheck } from "lucide-react";
+import { Boxes, GitBranch, Activity, ShieldCheck, ChevronRight } from "lucide-react";
 
 export function ConsultingServices() {
   const services = [
@@ -36,16 +36,14 @@ export function ConsultingServices() {
     <section id="services" className="bg-white py-14 md:py-20 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         {/* HEADER */}
-        <div className="mb-10 md:mb-14 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl text-[#1E293B] font-semibold leading-tight">
-            Consulting Services
-          </h2>
-
-          <p className="mt-4 text-lg md:text-xl text-[#6B7280] leading-relaxed">
-            Hands-on technical consulting and delivery support for enterprise
-            Angular and frontend engineering teams.
-          </p>
-        </div>
+        <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              Consulting Services
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Comprehensive frontend consulting services to transform your engineering organization
+            </p>
+          </div>
 
         {/* SERVICES LIST */}
         <div className="divide-y divide-slate-200">
@@ -100,9 +98,9 @@ export function ConsultingServices() {
                   {service.description}{" "}
                   <a
                     href={service.href}
-                    className="text-blue-600 font-medium hover:text-blue-700 transition whitespace-nowrap"
+                    className="text-blue-600 font-medium hover:text-blue-700 transition whitespace-nowrap flex items-center"
                   >
-                    Know more →
+                    Know more <ChevronRight className="w-4 h-4 mr-2 mt-0.5 text-blue-600 flex-shrink-0" />
                   </a>
                 </p>
               </div>

@@ -37,7 +37,7 @@ export default function HeroSection() {
 
             {/* SPECIALIZATION STRIP */}
             <p className="mt-4 text-base md:text-lg text-blue-600 font-medium">
-              Angular Modernization • Performance Engineering • Enterprise UI
+              Angular Modernization | Performance Engineering | Enterprise UI
               Development
             </p>
 
@@ -70,10 +70,10 @@ export default function HeroSection() {
             {/* CTA */}
             <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
               <a
-                href="#case-studies"
+                href="#contact"
                 className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-medium hover:bg-blue-700 transition rounded-md text-center"
               >
-                View Case Studies
+                Schedule a Call
               </a>
 
               <a

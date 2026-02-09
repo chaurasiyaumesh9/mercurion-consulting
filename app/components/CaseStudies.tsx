@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export function CaseStudies() {
   const cases = [
@@ -50,17 +50,15 @@ export function CaseStudies() {
     <section id="case-studies" className="bg-[#F9FAFB] py-14 md:py-20 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         {/* HEADER */}
-        <div className="mb-12 md:mb-16 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#1E293B]">
-            Case Studies
-          </h2>
-
-          <p className="mt-4 text-lg md:text-xl text-[#6B7280] leading-relaxed">
-            Representative enterprise engagements demonstrating measurable
-            frontend engineering impact across ecommerce and financial
-            compliance domains.
-          </p>
-        </div>
+        <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              Case Studies
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Real-world examples of how I've helped organizations transform their frontend engineering 
+              and deliver exceptional results
+            </p>
+          </div>
 
         {/* CASE LIST */}
         <div className="space-y-8 md:space-y-10">
@@ -111,8 +109,8 @@ export function CaseStudies() {
 
                   <ul className="space-y-2">
                     {caseStudy.results.map((result, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <Check className="w-4 h-4 text-blue-600 mt-1 shrink-0" />
+                      <li key={idx} className="flex items-center gap-2">
+                        <ChevronRight className="w-4 h-4 mr-2 mt-0.5 text-blue-600 flex-shrink-0" />
                         <span className="text-sm md:text-[15px] text-[#4B5563] leading-relaxed">
                           {result}
                         </span>

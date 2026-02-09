@@ -1,4 +1,4 @@
-import { Boxes, Activity, GitBranch } from "lucide-react";
+import { Boxes, Activity, GitBranch, ChevronRight } from "lucide-react";
 
 export function Expertise() {
   const expertiseAreas = [
@@ -46,16 +46,14 @@ export function Expertise() {
       <div className="max-w-7xl mx-auto px-6 md:px-8">
 
         {/* HEADER */}
-        <div className="mb-10 md:mb-14 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl text-[#1E293B] font-semibold leading-tight">
-            Enterprise Frontend Engineering Expertise
-          </h2>
-
-          <p className="mt-4 text-lg md:text-xl text-[#6B7280]">
-            Hands-on engineering across Angular ecosystems, large-scale frontend
-            platforms, and performance-critical enterprise applications.
-          </p>
-        </div>
+        <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              Enterprise Frontend Engineering Expertise
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Delivering scalable, high-performance solutions for complex business challenges
+            </p>
+          </div>
 
         {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -88,9 +86,9 @@ export function Expertise() {
                   <li
                     key={idx}
                     className="text-[#6B7280] text-sm md:text-[15px]
-                               flex items-start gap-2 leading-relaxed"
+                               flex items-center gap-2 leading-relaxed"
                   >
-                    <span className="text-[#2563EB] mt-1.5 text-xs">●</span>
+                    <ChevronRight className="w-4 h-4 mr-2 mt-0.5 text-blue-600 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}

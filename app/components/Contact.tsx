@@ -14,8 +14,7 @@ export function Contact() {
           </h2>
 
           <p className="mt-4 text-lg md:text-xl text-[#CBD5E1] leading-relaxed">
-            Available for enterprise Angular consulting and frontend performance
-            optimization engagements.
+            Whether you need help with a specific challenge or want to discuss a larger initiative, I'm here to help. Let's explore how we can work together to achieve your frontend goals.
           </p>
 
           {/* CONTACT LINKS */}
