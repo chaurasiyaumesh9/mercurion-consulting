@@ -106,6 +106,17 @@ export default function RootLayout({
             __html: JSON.stringify(faqStructuredData),
           }}
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTM-NXD85WF5"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-GTM-NXD85WF5');
+            `,
+          }}
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
