@@ -141,7 +141,7 @@ export default function ContactForm() {
               <Field
                 label="Full Name *"
                 value={form.name}
-                onChange={(v) => updateField("name", v)}
+                onChange={(v: string) => updateField("name", v)}
                 error={errors.name}
                 disabled={isSubmitting}
               />
@@ -149,7 +149,7 @@ export default function ContactForm() {
               <Field
                 label="Work Email *"
                 value={form.email}
-                onChange={(v) => updateField("email", v)}
+                onChange={(v: string) => updateField("email", v)}
                 error={errors.email}
                 icon={<Mail className="w-4 h-4" />}
                 disabled={isSubmitting}
@@ -158,7 +158,7 @@ export default function ContactForm() {
               <Field
                 label="Phone"
                 value={form.phone}
-                onChange={(v) => updateField("phone", v)}
+                onChange={(v: string) => updateField("phone", v)}
                 error={errors.phone}
                 icon={<Phone className="w-4 h-4" />}
                 disabled={isSubmitting}
@@ -167,7 +167,7 @@ export default function ContactForm() {
               <Field
                 label="Company"
                 value={form.company}
-                onChange={(v) => updateField("company", v)}
+                onChange={(v: string) => updateField("company", v)}
                 disabled={isSubmitting}
               />
             </div>
