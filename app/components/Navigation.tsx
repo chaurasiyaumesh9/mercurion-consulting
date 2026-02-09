@@ -2,6 +2,8 @@
 
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,8 +22,25 @@ export function Navigation() {
     <nav className="bg-white border-b border-[#E5E7EB] sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo/Name - Removed */}
-          <div className="w-8"></div>
+          <Link
+            href="/"
+            className="flex items-center gap-3 group"
+            aria-label="Go to homepage"
+          >
+            <Image
+              src="/logo.png"
+              alt="Mercurion Consulting Enterprise Angular Consulting Logo"
+              width={40}
+              height={40}
+              priority
+              className="transition-transform group-hover:scale-105"
+            />
+
+            {/* Hide text on very small mobile */}
+            <span className="font-semibold text-[#1E293B] text-lg tracking-tight">
+              Mercurion Consulting
+            </span>
+          </Link>          
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">

@@ -1,4 +1,5 @@
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { Navigation } from "@/app/components/Navigation";
 import {
   getBreadcrumbSchema,
   getServicePageSchema,
@@ -11,7 +12,6 @@ export const metadata: Metadata = {
   description:
     "Senior Angular migration consultant helping enterprises modernize legacy AngularJS and older Angular applications...",
 
-  // REDUCED keywords
   keywords: [
     "Angular Migration Consultant",
     "AngularJS to Angular Migration",
@@ -64,7 +64,6 @@ export default function AngularMigrationServicePage() {
   );
   return (
     <main className="bg-white">
-      {/* Add structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -76,8 +75,8 @@ export default function AngularMigrationServicePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
         }}
-      />
-      {/* HERO */}
+      />      
+      <Navigation />
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <Breadcrumbs items={breadcrumbItems} />
         <div className="max-w-4xl">
@@ -100,7 +99,6 @@ export default function AngularMigrationServicePage() {
         </div>
       </section>
 
-      {/* WHAT I HELP WITH */}
       <section className="bg-slate-50 py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-semibold text-slate-900 mb-10">
@@ -127,7 +125,6 @@ export default function AngularMigrationServicePage() {
         </div>
       </section>
 
-      {/* MIGRATION APPROACH */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-semibold text-slate-900 mb-10">
@@ -178,7 +175,6 @@ export default function AngularMigrationServicePage() {
         </div>
       </section>
 
-      {/* BUSINESS OUTCOMES */}
       <section className="bg-slate-50 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-semibold text-slate-900 mb-10">
@@ -218,7 +214,6 @@ export default function AngularMigrationServicePage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-semibold text-slate-900">

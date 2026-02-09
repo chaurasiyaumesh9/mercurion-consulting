@@ -1,3 +1,9 @@
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { Navigation } from "@/app/components/Navigation";
+import {
+  getBreadcrumbSchema,
+  getServicePageSchema,
+} from "@/app/lib/structuredData";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,13 +23,67 @@ export const metadata: Metadata = {
     "Large Scale Angular Application Development",
     "Angular Enterprise Application Architect",
   ],
+  alternates: {
+    canonical:
+      "https://mercurionconsulting.com/services/enterprise-angular-development",
+  },
+
+  openGraph: {
+    title: "Enterprise Angular Development Consultant",
+    description:
+      "Enterprise Angular platform engineering, scalable architecture, and enterprise UI development consulting services.",
+    url: "https://mercurionconsulting.com/services/enterprise-angular-development",
+    images: [
+      {
+        url: "https://mercurionconsulting.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function EnterpriseAngularDevelopmentPage() {
+  const breadcrumbItems = [
+    { label: "Services", href: "/#services" },
+    {
+      label: "Enterprise Angular Development",
+      href: "/services/enterprise-angular-development",
+    },
+  ];
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "https://mercurionconsulting.com" },
+    { name: "Services", url: "https://mercurionconsulting.com#services" },
+    {
+      name: "Enterprise Angular Development",
+      url: "https://mercurionconsulting.com/services/enterprise-angular-development",
+    },
+  ]);
+
+  const serviceSchema = getServicePageSchema(
+    "Enterprise Angular Development & Platform Engineering",
+    "Enterprise Angular platform engineering, scalable architecture, state management, and large-scale Angular application development consulting services.",
+    "https://mercurionconsulting.com/services/enterprise-angular-development",
+  );
+
   return (
     <main className="bg-white">
-      {/* HERO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />      
+      <Navigation />
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <Breadcrumbs items={breadcrumbItems} />
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">
             Enterprise Angular Development Consulting
@@ -44,7 +104,6 @@ export default function EnterpriseAngularDevelopmentPage() {
         </div>
       </section>
 
-      {/* SERVICES */}
       <section className="bg-slate-50 py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-semibold text-slate-900 mb-10">
@@ -71,7 +130,6 @@ export default function EnterpriseAngularDevelopmentPage() {
         </div>
       </section>
 
-      {/* APPROACH */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-semibold text-slate-900 mb-10">
@@ -122,7 +180,6 @@ export default function EnterpriseAngularDevelopmentPage() {
         </div>
       </section>
 
-      {/* BUSINESS IMPACT */}
       <section className="bg-slate-50 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-semibold text-slate-900 mb-10">
@@ -162,7 +219,6 @@ export default function EnterpriseAngularDevelopmentPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-semibold text-slate-900">

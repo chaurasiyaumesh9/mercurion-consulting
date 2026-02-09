@@ -1,3 +1,9 @@
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { Navigation } from "@/app/components/Navigation";
+import {
+  getBreadcrumbSchema,
+  getServicePageSchema,
+} from "@/app/lib/structuredData";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,13 +22,68 @@ export const metadata: Metadata = {
     "Engineering Productivity Consultant Frontend",
     "Enterprise Frontend Governance Consultant",
   ],
+
+  alternates: {
+    canonical:
+      "https://mercurionconsulting.com/services/frontend-delivery-enablement",
+  },
+
+  openGraph: {
+    title: "Enterprise Frontend Delivery & Engineering Enablement",
+    description:
+      "Frontend delivery consulting covering CI/CD integration, engineering standards, release stability, and enterprise frontend delivery optimization.",
+    url: "https://mercurionconsulting.com/services/frontend-delivery-enablement",
+    images: [
+      {
+        url: "https://mercurionconsulting.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function FrontendDeliveryEnablementPage() {
+  const breadcrumbItems = [
+    { label: "Services", href: "/#services" },
+    {
+      label: "Frontend Delivery & Engineering Enablement",
+      href: "/services/frontend-delivery-enablement",
+    },
+  ];
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "https://mercurionconsulting.com" },
+    { name: "Services", url: "https://mercurionconsulting.com#services" },
+    {
+      name: "Frontend Delivery & Engineering Enablement",
+      url: "https://mercurionconsulting.com/services/frontend-delivery-enablement",
+    },
+  ]);
+
+  const serviceSchema = getServicePageSchema(
+    "Enterprise Frontend Delivery & Engineering Enablement",
+    "Enterprise frontend delivery consulting including CI/CD integration, release stability improvement, code quality enforcement, and distributed team engineering enablement.",
+    "https://mercurionconsulting.com/services/frontend-delivery-enablement",
+  );
+
   return (
     <main className="bg-white">
-      {/* HERO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <Navigation />
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <Breadcrumbs items={breadcrumbItems} />
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">
             Enterprise Frontend Delivery & Engineering Enablement Consulting

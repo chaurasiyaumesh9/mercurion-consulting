@@ -1,3 +1,9 @@
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { Navigation } from "@/app/components/Navigation";
+import {
+  getBreadcrumbSchema,
+  getServicePageSchema,
+} from "@/app/lib/structuredData";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,13 +23,68 @@ export const metadata: Metadata = {
     "High Traffic Frontend Performance Specialist",
     "Improve LCP FID CLS Consultant",
   ],
+
+  alternates: {
+    canonical:
+      "https://mercurionconsulting.com/services/frontend-performance-optimization",
+  },
+
+  openGraph: {
+    title: "Frontend Performance Optimization Consultant",
+    description:
+      "Angular performance engineering, Core Web Vitals optimization, and enterprise frontend runtime performance consulting.",
+    url: "https://mercurionconsulting.com/services/frontend-performance-optimization",
+    images: [
+      {
+        url: "https://mercurionconsulting.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function FrontendPerformanceServicePage() {
+  const breadcrumbItems = [
+    { label: "Services", href: "/#services" },
+    {
+      label: "Frontend Performance Optimization",
+      href: "/services/frontend-performance-optimization",
+    },
+  ];
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "https://mercurionconsulting.com" },
+    { name: "Services", url: "https://mercurionconsulting.com#services" },
+    {
+      name: "Frontend Performance Optimization",
+      url: "https://mercurionconsulting.com/services/frontend-performance-optimization",
+    },
+  ]);
+
+  const serviceSchema = getServicePageSchema(
+    "Frontend Performance Optimization & Runtime Stability",
+    "Angular performance optimization consulting including Core Web Vitals improvement, bundle optimization, runtime performance tuning, and enterprise frontend performance engineering.",
+    "https://mercurionconsulting.com/services/frontend-performance-optimization",
+  );
+
   return (
     <main className="bg-white">
-      {/* HERO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <Navigation />
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <Breadcrumbs items={breadcrumbItems} />
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">
             Frontend Performance Optimization Consulting
