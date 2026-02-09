@@ -4,7 +4,9 @@ import {
   getBreadcrumbSchema,
   getServicePageSchema,
 } from "@/app/lib/structuredData";
+import { ChevronRight } from "lucide-react";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
@@ -75,7 +77,7 @@ export default function AngularMigrationServicePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
         }}
-      />      
+      />
       <Navigation />
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <Breadcrumbs items={breadcrumbItems} />
@@ -225,12 +227,13 @@ export default function AngularMigrationServicePage() {
             migrations with minimal business disruption.
           </p>
 
-          <a
-            href="mailto:contact@mercurionconsulting.com"
-            className="inline-block mt-8 px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
+          <Link
+            href="/contact"
+            className="inline-flex items-center mt-8 px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
           >
-            Discuss Your Migration →
-          </a>
+            <span>Discuss Your Migration</span>
+            <ChevronRight className="w-6 h-6" />
+          </Link>
         </div>
       </section>
     </main>

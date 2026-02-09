@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -60,28 +61,29 @@ export default function HeroSection() {
               <p>✔ Enterprise Production Systems</p>
               <p>✔ Distributed & Global Team Collaboration</p>
               <p className="mt-6 text-gray-700 leading-relaxed max-w-2xl">
-                Available for hire as a Senior Angular Consultant, Enterprise Angular Developer, or Frontend Architecture Consultant. I support global
-                organizations with Angular migration, performance optimization,
-                and enterprise frontend modernization through remote consulting
-                and contract engagements.
+                Available for hire as a Senior Angular Consultant, Enterprise
+                Angular Developer, or Frontend Architecture Consultant. I
+                support global organizations with Angular migration, performance
+                optimization, and enterprise frontend modernization through
+                remote consulting and contract engagements.
               </p>
             </div>
 
             {/* CTA */}
             <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-medium hover:bg-blue-700 transition rounded-md text-center"
               >
                 Schedule a Call
-              </a>
+              </Link>
 
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="w-full sm:w-auto px-6 py-3 border border-gray-300 font-medium hover:bg-gray-50 transition rounded-md text-center"
               >
                 Contact Me
-              </a>
+              </Link>
             </div>
           </div>
         </div>

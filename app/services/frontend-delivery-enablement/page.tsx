@@ -4,7 +4,9 @@ import {
   getBreadcrumbSchema,
   getServicePageSchema,
 } from "@/app/lib/structuredData";
+import { ChevronRight } from "lucide-react";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
@@ -232,12 +234,13 @@ export default function FrontendDeliveryEnablementPage() {
             mission-critical frontend platforms.
           </p>
 
-          <a
-            href="mailto:contact@mercurionconsulting.com"
-            className="inline-block mt-8 px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
+          <Link
+            href="/contact"
+            className="inline-flex items-center mt-8 px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
           >
-            Discuss Frontend Delivery Consulting →
-          </a>
+            <span>Discuss Frontend Delivery Consulting</span>
+            <ChevronRight className="w-6 h-6" />
+          </Link>
         </div>
       </section>
     </main>
