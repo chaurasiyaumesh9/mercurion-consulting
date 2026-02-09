@@ -1,30 +1,85 @@
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import {
+  getBreadcrumbSchema,
+  getServicePageSchema,
+} from "@/app/lib/structuredData";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
     "Angular Migration & Modernization Consultant | AngularJS to Angular Enterprise Upgrades",
-
   description:
-    "Senior Angular migration consultant helping enterprises modernize legacy AngularJS and older Angular applications. Expert in enterprise Angular upgrades, performance optimization, and large-scale frontend modernization.",
+    "Senior Angular migration consultant helping enterprises modernize legacy AngularJS and older Angular applications...",
 
+  // REDUCED keywords
   keywords: [
     "Angular Migration Consultant",
-    "Angular Modernization Consultant",
-    "AngularJS to Angular Migration Expert",
-    "Enterprise Angular Upgrade Consultant",
-    "Legacy Angular Modernization Specialist",
-    "Hire Angular Migration Consultant",
-    "Angular Upgrade Specialist Enterprise",
-    "Frontend Modernization Consultant",
-    "Enterprise Angular Migration Services",
+    "AngularJS to Angular Migration",
+    "Angular Upgrade Specialist",
+    "Enterprise Angular Migration",
   ],
+
+  alternates: {
+    canonical:
+      "https://mercurionconsulting.com/services/angular-migration-modernization",
+  },
+
+  openGraph: {
+    title: "Angular Migration & Modernization Consultant",
+    description:
+      "Expert AngularJS to Angular migration services for enterprises",
+    url: "https://mercurionconsulting.com/services/angular-migration-modernization",
+    images: [
+      {
+        url: "https://mercurionconsulting.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function AngularMigrationServicePage() {
+  const breadcrumbItems = [
+    { label: "Services", href: "/#services" },
+    {
+      label: "Angular Migration",
+      href: "/services/angular-migration-modernization",
+    },
+  ];
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "https://mercurionconsulting.com" },
+    { name: "Services", url: "https://mercurionconsulting.com#services" },
+    {
+      name: "Angular Migration",
+      url: "https://mercurionconsulting.com/services/angular-migration-modernization",
+    },
+  ]);
+
+  const serviceSchema = getServicePageSchema(
+    "Angular Migration & Modernization",
+    "Expert AngularJS to Angular migration and enterprise Angular upgrade services",
+    "https://mercurionconsulting.com/services/angular-migration-modernization",
+  );
   return (
     <main className="bg-white">
+      {/* Add structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <Breadcrumbs items={breadcrumbItems} />
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">
             Angular Migration & Modernization Consulting

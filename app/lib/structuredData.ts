@@ -9,7 +9,10 @@ export const personStructuredData = {
     "@type": "Organization",
     name: "Mercurion Consulting",
   },
-  sameAs: ["https://www.linkedin.com/in/uc1990/"],
+  sameAs: [
+    "https://www.linkedin.com/in/uc1990/",
+    "https://github.com/chaurasiyaumesh9",
+  ],
   knowsAbout: [
     "Angular",
     "Angular Architecture",
@@ -21,6 +24,27 @@ export const personStructuredData = {
     "Core Web Vitals Optimization",
     "Enterprise Web Applications",
   ],
+};
+
+export const organizationStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Mercurion Consulting",
+  url: "https://mercurionconsulting.com",
+  logo: "https://mercurionconsulting.com/logo.png", // Add a logo file
+  description:
+    "Enterprise Angular consulting services including modernization, migration, performance optimization, and frontend platform engineering.",
+  founder: {
+    "@type": "Person",
+    name: "Umesh Chaurasiya",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "contact@mercurionconsulting.com",
+    contactType: "Customer Service",
+    areaServed: "Worldwide",
+  },
+  sameAs: ["https://www.linkedin.com/in/uc1990/"],
 };
 
 export const serviceStructuredData = {
@@ -45,7 +69,9 @@ export const serviceStructuredData = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Angular Consulting",
+          name: "Angular Migration & Modernization Consulting",
+          description:
+            "Expert AngularJS to Angular migration and enterprise Angular upgrade services",
         },
       },
       {
@@ -53,6 +79,26 @@ export const serviceStructuredData = {
         itemOffered: {
           "@type": "Service",
           name: "Angular Performance Optimization Consulting",
+          description:
+            "Core Web Vitals optimization and runtime performance improvements for Angular applications",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Enterprise Angular Development Consulting",
+          description:
+            "Large-scale Angular application architecture and development consulting",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Frontend Delivery Enablement",
+          description:
+            "Frontend platform engineering and team enablement services",
         },
       },
     ],
@@ -75,7 +121,7 @@ export const faqStructuredData = {
       name: "Can you be hired as a remote Angular consultant?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. I work with global teams as a remote Senior Angular Consultant and enterprise frontend performance specialist.",
+        text: "Yes. I work with global teams as a remote Senior Angular Consultant and enterprise frontend performance specialist. I have experience working with distributed teams across different time zones and can seamlessly integrate into your development workflow.",
       },
     },
     {
@@ -83,7 +129,7 @@ export const faqStructuredData = {
       name: "Do you provide Angular migration consulting?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. I specialize in AngularJS to Angular migration, legacy frontend modernization, and enterprise Angular platform upgrades.",
+        text: "Yes. I specialize in AngularJS to Angular migration, legacy frontend modernization, and enterprise Angular platform upgrades. I help organizations safely migrate their applications with minimal business disruption using proven incremental migration strategies.",
       },
     },
     {
@@ -91,8 +137,61 @@ export const faqStructuredData = {
       name: "Do you support enterprise Angular performance optimization?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. I help improve Core Web Vitals, bundle size optimization, rendering performance, and runtime stability for enterprise Angular applications.",
+        text: "Yes. I help improve Core Web Vitals, bundle size optimization, rendering performance, and runtime stability for enterprise Angular applications. This includes profiling, identifying bottlenecks, and implementing performance best practices.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is your availability for consulting projects?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "I am available for both short-term and long-term consulting engagements, including contract positions, project-based work, and technical advisory roles. Contact me to discuss your specific needs and timeline.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you work with international clients?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. I work with clients globally and have experience with remote collaboration across different time zones. I can adapt my schedule to overlap with your team's working hours.",
       },
     },
   ],
 };
+
+// Helper function to generate breadcrumb schema for service pages
+export const getBreadcrumbSchema = (
+  items: Array<{ name: string; url: string }>,
+) => ({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
+});
+
+// Helper function for individual service pages
+export const getServicePageSchema = (
+  serviceName: string,
+  description: string,
+  url: string,
+) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: serviceName,
+  description: description,
+  url: url,
+  provider: {
+    "@type": "Person",
+    name: "Umesh Chaurasiya",
+    jobTitle: "Senior Angular Consultant",
+  },
+  areaServed: "Worldwide",
+  availableChannel: {
+    "@type": "ServiceChannel",
+    serviceUrl: "https://mercurionconsulting.com",
+  },
+});
