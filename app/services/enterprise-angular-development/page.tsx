@@ -10,20 +10,17 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Enterprise Angular Development Consultant | Senior Angular Architect & Engineer",
+    "Enterprise Angular Developer | Scalable Apps for Fortune 500 Companies",
 
   description:
-    "Senior Angular consultant providing enterprise Angular development, platform architecture, and large-scale frontend engineering for mission-critical web applications.",
+    "Build enterprise-grade Angular applications that scale. Proven experience with 1M+ user platforms. Clean architecture, high performance, mission-critical reliability. Trusted by global enterprises.",
 
   keywords: [
-    "Enterprise Angular Developer",
-    "Angular Development Consultant",
-    "Senior Angular Engineer Contractor",
+    "Enterprise Angular Development",
+    "Large Scale Angular Applications",
+    "Angular Platform Engineering",
     "Enterprise Angular Architect",
-    "Hire Angular Developer Enterprise",
-    "Angular Platform Engineering Consultant",
-    "Large Scale Angular Application Development",
-    "Angular Enterprise Application Architect",
+    "Scalable Angular Architecture",
   ],
   alternates: {
     canonical:

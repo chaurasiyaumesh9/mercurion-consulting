@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: "https://mercurionconsulting.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mercurion Consulting - Senior Angular Consultant",
+        alt: "Umesh Chaurasiya - Senior Angular Consultant",
       },
     ],
   },

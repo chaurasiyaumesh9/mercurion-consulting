@@ -10,19 +10,17 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Enterprise Frontend Delivery & Engineering Enablement Consultant | Frontend Platform & Delivery Specialist",
+    "Frontend Platform Engineering | Double Your Team's Delivery Speed",
 
   description:
-    "Senior frontend consultant helping enterprise teams improve engineering delivery, platform standards, CI/CD integration, and production stability for large-scale web applications.",
+    "Slow frontend releases holding you back? I'll set up CI/CD pipelines, establish best practices, and accelerate your team's velocity. Proven to 2x delivery speed in 90 days.",
 
   keywords: [
-    "Frontend Delivery Consultant",
-    "Frontend Engineering Enablement Consultant",
-    "Enterprise Frontend Delivery Specialist",
-    "Frontend Platform Engineering Consultant",
-    "Technical Leadership Frontend Consultant",
-    "Engineering Productivity Consultant Frontend",
-    "Enterprise Frontend Governance Consultant",
+    "Frontend Platform Engineering",
+    "Frontend Delivery Enablement",
+    "Developer Productivity Consulting",
+    "Frontend Team Acceleration",
+    "Frontend Infrastructure Consulting",
   ],
 
   alternates: {

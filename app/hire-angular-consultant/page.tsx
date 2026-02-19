@@ -2,21 +2,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Hire Senior Angular Consultant | Enterprise Angular Developer & Performance Specialist",
+    "Hire Angular Consultant | Available Now for Your Next Project",
 
   description:
-    "Hire a senior Angular consultant for enterprise frontend architecture, Angular migration, and performance optimization. Available for remote contract consulting supporting global teams.",
+    "Need an expert Angular consultant? 10+ years experience. Enterprise-grade delivery. Available for contracts starting next month. Trusted by Fortune 500 companies. Let's discuss your project.",
 
   keywords: [
     "Hire Angular Consultant",
     "Hire Angular Developer",
-    "Hire Senior Angular Engineer",
     "Angular Contractor Remote",
-    "Enterprise Angular Consultant for Hire",
-    "Angular Migration Consultant for Hire",
-    "Angular Performance Consultant for Hire",
-    "Remote Angular Consultant Contract",
-    "Global Angular Consultant for Hire",
+    "Enterprise Angular Consultant",
+    "Senior Angular Consultant",
   ],
 };
 

@@ -10,15 +10,16 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Angular Migration & Modernization Consultant | AngularJS to Angular Enterprise Upgrades",
+    "Angular Migration Expert | AngularJS to Angular 21 Upgrade Specialist",
   description:
-    "Senior Angular migration consultant helping enterprises modernize legacy AngularJS and older Angular applications...",
+    "Expert Angular migration consultant. Migrate your AngularJS app to Angular 18 with zero downtime. 10+ years experience. Serving enterprises globally. Free consultation available.",
 
   keywords: [
     "Angular Migration Consultant",
     "AngularJS to Angular Migration",
     "Angular Upgrade Specialist",
     "Enterprise Angular Migration",
+    "Angular Modernization Expert",
   ],
 
   alternates: {
@@ -27,17 +28,24 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Angular Migration & Modernization Consultant",
+    title: "Angular Migration Expert | Zero-Downtime AngularJS Upgrades",
     description:
-      "Expert AngularJS to Angular migration services for enterprises",
+      "Migrate your AngularJS app to Angular 18 safely. 10+ years experience with enterprise migrations.",
     url: "https://mercurionconsulting.com/services/angular-migration-modernization",
     images: [
       {
         url: "https://mercurionconsulting.com/og-image.jpg",
         width: 1200,
         height: 630,
+        alt: "Angular Migration Services by Umesh Chaurasiya",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Angular Migration Expert | Zero-Downtime Upgrades",
+    description: "Expert AngularJS to Angular migration services for enterprises",
+    images: ["https://mercurionconsulting.com/og-image.jpg"],
   },
 };
 
