@@ -12,17 +12,18 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "Senior Angular Consultant | Enterprise Frontend & Performance Engineering Specialist",
+    "Senior Angular Consultant | Full-Stack Developer with NetSuite SuiteCommerce Expertise",
 
   description:
-    "Senior Angular consultant helping global organizations modernize legacy Angular applications, improve frontend performance, and scale enterprise web platforms. Specializing in Angular migration, performance optimization, and enterprise frontend architecture.",
+    "Senior Full-Stack Developer specializing in Angular and NetSuite SuiteCommerce. 10+ years building enterprise applications and high-performance e-commerce platforms. Available for remote contracts.",
   keywords: [
     "Angular Consultant",
     "Hire Angular Developer",
+    "SuiteCommerce Developer",
+    "NetSuite SuiteCommerce Consultant",
     "Angular Migration Expert",
-    "Enterprise Angular Architect",
-    "Frontend Performance Optimization",
-    "AngularJS Migration Consultant",
+    "SuiteScript Developer",
+    "Full-Stack JavaScript Developer",
     "Remote Angular Consultant",
   ],
   authors: [{ name: "Umesh Chaurasiya" }],
@@ -44,25 +45,25 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://mercurionconsulting.com",
     title:
-      "Senior Angular Consultant | Enterprise Frontend Performance Specialist",
+      "Senior Angular & NetSuite SuiteCommerce Developer | Full-Stack Consultant",
     description:
-      "Helping enterprises modernize Angular applications, improve performance, and scale frontend platforms.",
+      "10+ years experience in Angular and NetSuite SuiteCommerce development. Available for enterprise projects and remote contracts.",
     siteName: "Mercurion Consulting",
     images: [
       {
         url: "https://mercurionconsulting.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Umesh Chaurasiya - Senior Angular Consultant",
+        alt: "Umesh Chaurasiya - Senior Angular & SuiteCommerce Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Senior Angular Consultant | Enterprise Frontend & Performance Engineering",
+      "Senior Angular & SuiteCommerce Developer | Available for Hire",
     description:
-      "Angular migration, performance optimization, and enterprise frontend architecture consulting.",
+      "10+ years experience. Angular migration, SuiteCommerce development, enterprise consulting.",
     images: ["https://mercurionconsulting.com/og-image.jpg"],
   },
   alternates: {
