@@ -1,5 +1,4 @@
 import { Navigation } from "./components/Navigation";
-import { Hero } from "./components/Hero";
 import { Expertise } from "./components/Expertise";
 import { ConsultingServices } from "./components/ConsultingServices";
 import { CaseStudies } from "./components/CaseStudies";
