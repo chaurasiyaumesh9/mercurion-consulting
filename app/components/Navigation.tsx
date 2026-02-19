@@ -9,13 +9,13 @@ export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: "About", href: "#about" },
-    { label: "Expertise", href: "#expertise" },
-    { label: "Services", href: "#services" },
-    { label: "Case Studies", href: "#case-studies" },
-    { label: "Approach", href: "#approach" },
+    { label: "About", href: "/#about" },
+    { label: "Expertise", href: "/#expertise" },
+    { label: "Services", href: "/#services" },
+    { label: "Case Studies", href: "/#case-studies" },
+    { label: "Approach", href: "/#approach" },
     // { label: "Blog", href: "#blog" },
-    { label: "Contact", href: "#contact" }
+    { label: "Contact", href: "/#contact" }
   ];
 
   return (
