@@ -19,7 +19,7 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="bg-white border-b border-[#E5E7EB] sticky top-0 z-50 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex justify-between items-center h-20">
           <Link
@@ -27,17 +27,17 @@ export function Navigation() {
             className="flex items-center gap-3 group"
             aria-label="Go to homepage"
           >
-            <Image
+            {/* <Image
               src="/logo.png"
               alt="Mercurion Consulting Enterprise Angular Consulting Logo"
               width={40}
               height={40}
               priority
               className="transition-transform group-hover:scale-105"
-            />
+            /> */}
 
             {/* Hide text on very small mobile */}
-            <span className="font-semibold text-[#1E293B] text-lg tracking-tight">
+            <span className="font-semibold text-gray-300 text-lg tracking-tight">
               Mercurion Consulting
             </span>
           </Link>          
@@ -48,7 +48,7 @@ export function Navigation() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-[#475569] hover:text-[#2563EB] transition-colors"
+                className="text-sm transition-colors text-gray-300 hover:text-white"
               >
                 {item.label}
               </a>
@@ -58,7 +58,7 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-[#1E293B]"
+            className="md:hidden text-gray-300 hover:text-white"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -74,7 +74,7 @@ export function Navigation() {
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-[#475569] hover:text-[#2563EB] transition-colors py-2"
+                  className="text-gray-300 hover:text-white transition-colors py-2"
                 >
                   {item.label}
                 </a>

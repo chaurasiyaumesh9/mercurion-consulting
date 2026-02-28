@@ -1,91 +1,108 @@
 "use client";
 
+import { MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section id="about" className="bg-white scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-14 md:py-10">
-        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-14 lg:gap-16">
-          {/* IMAGE — FIRST IN DOM (Mobile Trust + LCP) */}
-          <div className="flex justify-center md:justify-start md:flex-[0.35] shrink-0">
-            <div className="relative w-[200px] h-[240px] md:w-[280px] md:h-[340px]">
-              <Image
-                src="/umesh-profile.jpg"
-                alt="Umesh Chaurasiya — Senior Angular Consultant and Frontend Performance Engineer"
-                fill
-                sizes="(max-width: 640px) 80vw,
-                       (max-width: 1024px) 40vw,
-                       280px"
-                className="object-cover rounded-lg"
-                priority
-              />
-            </div>
-          </div>
+    <section id="about" className="bg-white scroll-mt-24 pt-16">
+      <div className="min-h-screen flex flex-col md:flex-row">
+        <div className="relative flex-1 flex items-center justify-center overflow-hidden p-8">
+            <div
+                className="absolute inset-0 bg-slate-900 hidden md:block"
+                style={{
+                clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)",
+                }}
+            />
 
-          {/* CONTENT */}
-          <div className="text-center md:text-left md:flex-[0.65] max-w-3xl">
+            <div className="flex items-center justify-center flex-col">
+                <div className="relative w-60 h-60 md:w-80 md:h-80 md:rounded-full border-8 border-white overflow-hidden">
+                    <Image
+                        src="/umesh-profile.jpg"
+                        alt="Umesh Chaurasiya — Senior Angular Consultant and Frontend Performance Engineer"
+                        fill
+                        sizes="(max-width: 640px) 80vw,
+                    (max-width: 1024px) 40vw,
+                    280px"
+                        className="object-cover"
+                        priority
+                    />
+                </div>
+                
+            </div>
+        </div>
+
+        <div className="flex-1 p-8 flex justify-center flex-col">
             {/* NAME */}
-            <h1 className="text-3xl md:text-5xl font-semibold text-gray-900 leading-tight">
-              Umesh Chaurasiya
+            <h1 className="text-3xl md:text-5xl text-gray-900">
+                Umesh Chaurasiya
             </h1>
 
             {/* TITLE */}
-            <h2 className="mt-2 text-xl md:text-2xl font-medium text-gray-500">
-              Senior Angular Engineer & Frontend Consultant
+            <h2 className="text-xl md:text-2xl text-slate-600 mt-2">
+                Senior Angular Engineer & Frontend Consultant
             </h2>
 
             {/* SPECIALIZATION STRIP */}
-            <p className="mt-4 text-base md:text-lg text-blue-600 font-medium">
-              Angular Modernization | Performance Engineering | Enterprise UI
-              Development
+            <p className="mt-4 text-md text-slate-600">
+                Angular Modernization | Performance Engineering | Enterprise UI
+                Development
             </p>
+
+            <div className="border-b border-slate-300 py-2"></div>
 
             {/* VALUE PROP */}
-            <p className="mt-6 text-gray-600 leading-relaxed">
-              I help engineering teams modernize legacy Angular applications,
-              improve frontend performance, and deliver stable, production-ready
-              features for enterprise web platforms.
+            <p className="mt-4 text-slate-700 leading-relaxed text-[0.9rem]">
+                I help engineering teams modernize legacy Angular applications,
+                improve frontend performance, and deliver stable, production-ready
+                features for enterprise web platforms.
             </p>
 
-            <p className="mt-4 text-gray-600 leading-relaxed">
-              Specialized in Angular migrations, runtime performance
-              optimization, large-scale feature delivery, and long-term
-              maintenance of business-critical applications.
+            <p className="mt-4 text-slate-700 leading-relaxed text-[0.9rem]">
+                Specialized in Angular migrations, runtime performance optimization,
+                large-scale feature delivery, and long-term maintenance of
+                business-critical applications.
             </p>
 
             {/* PROOF SIGNALS */}
-            <div className="mt-6 space-y-1.5 text-sm text-gray-700">
-              <p>✔ 10+ Years Frontend Engineering Experience</p>
-              <p>✔ Enterprise Production Systems</p>
-              <p>✔ Distributed & Global Team Collaboration</p>
-              <p className="mt-6 text-gray-700 leading-relaxed max-w-2xl">
-                Available for hire as a Senior Angular Consultant, Enterprise
-                Angular Developer, or Frontend Architecture Consultant. I
-                support global organizations with Angular migration, performance
-                optimization, and enterprise frontend modernization through
-                remote consulting and contract engagements.
-              </p>
+            <div className="mt-4">
+                <p className="text-slate-700 text-[0.9rem]">✔ 10+ Years Frontend Engineering Experience</p>
+                <p className="text-slate-700 text-[0.9rem]">✔ Enterprise Production Systems</p>
+                <p className="text-slate-700 text-[0.9rem]">✔ Distributed & Global Team Collaboration</p>
+                
             </div>
+
+            <p className="mt-4 text-slate-700 text-[0.9rem]">
+                Available for hire as a Senior Angular Consultant, Enterprise
+                Angular Developer, or Frontend Architecture Consultant. I support
+                global organizations with Angular migration, performance
+                optimization, and enterprise frontend modernization through remote
+                consulting and contract engagements.
+            </p>
+
+            {/* <div className="mt-4 text-md text-slate-600 flex items-center gap-1">
+                <MapPin size={20} />
+                <span>Available for remote opportunities</span>
+            </div> */}
 
             {/* CTA */}
             <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-              <Link
+                <Link
                 href="/contact"
-                className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-medium hover:bg-blue-700 transition rounded-md text-center"
-              >
+                className="inline-block bg-blue-500 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-600 transition-all shadow-lg hover:shadow-xl"
+                >
                 Schedule a Call
-              </Link>
+                </Link>
 
-              <Link
+                {/* <Link
                 href="/contact"
                 className="w-full sm:w-auto px-6 py-3 border border-gray-300 font-medium hover:bg-gray-50 transition rounded-md text-center"
-              >
+                >
                 Contact Me
-              </Link>
+                </Link> */}
             </div>
-          </div>
+            
         </div>
       </div>
     </section>
