@@ -34,7 +34,7 @@ export function ConsultingApproach() {
             <h2 className="text-3xl sm:text-4xl text-slate-900 mb-4">
               Technical Delivery Approach
             </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-600">
               A proven methodology for delivering high-quality frontend solutions on time and within budget
             </p>
           </div>

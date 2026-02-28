@@ -51,7 +51,7 @@ export function ConsultingServices() {
           <h2 className="text-3xl sm:text-4xl text-slate-900 mb-4">
             Consulting Services
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-600">
             Comprehensive frontend consulting services to transform your
             engineering organization
           </p>
@@ -82,11 +82,11 @@ export function ConsultingServices() {
 
                 {/* Content */}
                 <div className={isReversed ? "md:order-1" : "md:order-2"}>
-                  <h3 className="text-2xl font-semibold text-slate-900">
+                  <h3 className="text-xl text-slate-900">
                     {service.title}
                   </h3>
 
-                  <p className="mt-4 text-slate-700 leading-relaxed text-lg">
+                  <p className="mt-4 text-slate-700 text-[0.95rem] leading-relaxed">
                     {service.description}
                   </p>
 

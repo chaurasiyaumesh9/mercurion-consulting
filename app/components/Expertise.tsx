@@ -45,7 +45,7 @@ export function Expertise() {
                 <h2 className="text-3xl sm:text-4xl text-slate-900 mb-4">
                     Enterprise Frontend Engineering Expertise
                 </h2>
-                <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+                <p className="text-lg text-slate-600">
                     Delivering scalable, high-performance solutions for complex business challenges
                 </p>
             </div>
@@ -74,7 +74,7 @@ export function Expertise() {
                             <li key={idx} className="flex items-start gap-2 leading-relaxed">
                                 {/* <CheckCircle size={18} className="text-blue-700 mr-2 mt-0.5 shrink-0" /> */}
                                 <span className="text-slate-700 text-[0.95rem] group-hover:text-slate-200">✔</span>
-                                <span className="text-slate-700 text-[0.85rem] group-hover:text-slate-200">{item}</span>
+                                <span className="text-slate-700 text-[0.95rem] group-hover:text-slate-200">{item}</span>
                             </li>
                             ))}
                         </ul>
