@@ -80,7 +80,7 @@ export default function HeroSection() {
                     </div>
 
                     <div className="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-                        <Link href="/contact" className="inline-block bg-blue-700 text-white px-8 py-3 rounded-md shadow-md hover:shadow-lg text-base font-medium hover:bg-blue-800 transition">
+                        <Link href="/contact" className="inline-block bg-blue-700 text-white text-center px-8 py-3 rounded-md shadow-md hover:shadow-lg text-base font-medium hover:bg-blue-800 transition">
                             Schedule a Call
                         </Link>
                     </div>
