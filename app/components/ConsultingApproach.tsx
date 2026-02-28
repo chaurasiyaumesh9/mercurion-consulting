@@ -31,7 +31,7 @@ export function ConsultingApproach() {
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         {/* HEADER */}
         <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl text-slate-900 mb-4">
               Technical Delivery Approach
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">

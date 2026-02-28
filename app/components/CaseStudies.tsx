@@ -47,11 +47,11 @@ export function CaseStudies() {
   ];
 
   return (
-    <section id="case-studies" className="bg-[#F9FAFB] py-14 md:py-20 scroll-mt-24">
+    <section id="case-studies" className="bg-slate-50 py-14 md:py-20 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         {/* HEADER */}
         <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl text-slate-900 mb-4">
               Case Studies
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">

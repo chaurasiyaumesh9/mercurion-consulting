@@ -1,4 +1,4 @@
-import { Boxes, Activity, GitBranch, ChevronRight } from "lucide-react";
+import { Boxes, Activity, GitBranch, ChevronRight, CheckCircle } from "lucide-react";
 
 export function Expertise() {
   const expertiseAreas = [
@@ -39,67 +39,50 @@ export function Expertise() {
   ];
 
   return (
-    <section
-      id="expertise"
-      className="bg-[#F9FAFB] py-14 md:py-20 scroll-mt-24"
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+    <section id="expertise" className="bg-slate-50 py-14 md:py-20 scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+            <div className="text-center mb-16">
+                <h2 className="text-3xl sm:text-4xl text-slate-900 mb-4">
+                    Enterprise Frontend Engineering Expertise
+                </h2>
+                <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Delivering scalable, high-performance solutions for complex business challenges
+                </p>
+            </div>
 
-        {/* HEADER */}
-        <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              Enterprise Frontend Engineering Expertise
-            </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Delivering scalable, high-performance solutions for complex business challenges
-            </p>
-          </div>
+            {/* GRID */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
-        {/* GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                {expertiseAreas.map((area, index) => (
+                    <div key={index} className="group bg-white p-6 border border-slate-200 hover:bg-gradient-to-br from-slate-900 to-blue-950 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1transition-all duration-300">
 
-          {expertiseAreas.map((area, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 md:p-8 border border-[#E5E7EB] rounded-xl
-                         hover:shadow-sm transition-shadow duration-200"
-            >
+                        {/* CARD HEADER */}                        
+                        <div className="flex items-center justify-center">
+                            {/* <div className="flex items-center justify-center w-11 h-11 bg-slate-200 rounded shrink-0">
+                                <area.icon className="w-5 h-5 text-slate-700" />
+                            </div> */}
+                            <h3 className="text-xl text-slate-900 text-center group-hover:text-white">
+                                {area.title}
+                            </h3>
+                        </div>
 
-              {/* CARD HEADER */}
-              <div className="flex items-start gap-4 mb-6">
+                        <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent my-4"></div>
 
-                <div className="flex items-center justify-center
-                                w-10 h-10 md:w-11 md:h-11
-                                bg-[#EFF6FF] rounded-lg shrink-0">
-                  <area.icon className="w-5 h-5 text-[#2563EB]" />
-                </div>
-
-                <h3 className="text-xl md:text-2xl text-[#1E293B] leading-snug font-semibold">
-                  {area.title}
-                </h3>
-
-              </div>
-
-              {/* LIST */}
-              <ul className="space-y-2 md:space-y-2.5">
-                {area.items.map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="text-[#6B7280] text-sm md:text-[15px]
-                               flex items-center gap-2 leading-relaxed"
-                  >
-                    <ChevronRight className="w-4 h-4 mr-2 mt-0.5 text-blue-600 flex-shrink-0" />
-                    <span>{item}</span>
-                  </li>
+                        {/* LIST */}
+                        <ul className="space-y-2 md:space-y-2.5">
+                            {area.items.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2 leading-relaxed">
+                                {/* <CheckCircle size={18} className="text-blue-700 mr-2 mt-0.5 shrink-0" /> */}
+                                <span className="text-slate-700 text-[0.95rem] group-hover:text-slate-200">✔</span>
+                                <span className="text-slate-700 text-[0.85rem] group-hover:text-slate-200">{item}</span>
+                            </li>
+                            ))}
+                        </ul>
+                    </div>
                 ))}
-              </ul>
 
             </div>
-          ))}
-
         </div>
-
-      </div>
     </section>
   );
 }
