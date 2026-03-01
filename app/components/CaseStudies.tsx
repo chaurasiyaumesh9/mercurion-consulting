@@ -109,7 +109,7 @@ export function CaseStudies() {
                       >
                         <CheckCircle
                           size={16}
-                          className="text-blue-700 mr-2 flex-shrink-0 mt-1"
+                          className="text-blue-700 mr-2 shrink-0 mt-1"
                         />
                         <span className="text-sm">{item}</span>
                       </li>

@@ -52,27 +52,22 @@ export function Expertise() {
 
             {/* GRID */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-
                 {expertiseAreas.map((area, index) => (
-                    <div key={index} className="group bg-white p-6 border border-slate-200 hover:bg-gradient-to-br from-slate-900 to-blue-950 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1transition-all duration-300">
+                    <div key={index} className="group bg-white p-6 border border-slate-200 hover:bg-linear-to-br from-slate-900 to-blue-950 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1transition-all duration-300">
 
                         {/* CARD HEADER */}                        
                         <div className="flex items-center justify-center">
-                            {/* <div className="flex items-center justify-center w-11 h-11 bg-slate-200 rounded shrink-0">
-                                <area.icon className="w-5 h-5 text-slate-700" />
-                            </div> */}
                             <h3 className="text-xl text-slate-900 text-center group-hover:text-white">
                                 {area.title}
                             </h3>
                         </div>
 
-                        <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent my-4"></div>
+                        <div className="h-px bg-linear-to-r from-transparent via-slate-300 to-transparent my-4"></div>
 
                         {/* LIST */}
                         <ul className="space-y-2 md:space-y-2.5">
                             {area.items.map((item, idx) => (
                             <li key={idx} className="flex items-start gap-2 leading-relaxed">
-                                {/* <CheckCircle size={18} className="text-blue-700 mr-2 mt-0.5 shrink-0" /> */}
                                 <span className="text-slate-700 text-[0.95rem] group-hover:text-slate-200">✔</span>
                                 <span className="text-slate-700 text-[0.95rem] group-hover:text-slate-200">{item}</span>
                             </li>
@@ -80,7 +75,6 @@ export function Expertise() {
                         </ul>
                     </div>
                 ))}
-
             </div>
         </div>
     </section>

@@ -9,7 +9,7 @@ export default function HeroSection() {
         <section id="about" className="bg-white scroll-mt-24 pt-16">
             <div className="min-h-screen flex flex-col md:flex-row">
                 <div className="relative flex-1 flex items-center justify-center overflow-hidden md:p-8">
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 hidden md:block" style={{clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)",}} ></div>
+                    <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-blue-950 to-slate-900 hidden md:block" style={{clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)",}} ></div>
                     <div className="flex items-center justify-center flex-col">
                         <div className="relative w-60 h-60 md:w-80 md:h-80 md:rounded-full border-8 border-white overflow-hidden">
                             <Image

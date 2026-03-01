@@ -58,7 +58,7 @@ export function ConsultingServices() {
         </div>
 
         {/* SERVICES LIST */}
-        <div className="space-y-24">
+        <div className="space-y-8">
           {services.map((service, index) => {
             const isReversed = index % 2 !== 0;
 
@@ -75,7 +75,7 @@ export function ConsultingServices() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-[320px] object-cover"
+                      className="w-full h-80 object-cover"
                     />
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export function ConsultingServices() {
                     {service.title}
                   </h3>
 
-                  <p className="mt-4 text-slate-700 text-[0.95rem] leading-relaxed">
+                  <p className="mt-2 text-slate-700 text-[0.95rem] leading-relaxed">
                     {service.description}
                   </p>
 
