@@ -1,7 +1,7 @@
-import { Award, CheckCircle } from "lucide-react";
+import { Award, Check, CheckCircle } from "lucide-react";
 
-export function CaseStudies() {
-  const cases = [
+export function ProfessionalProjects() {
+  const projects = [
     {
       title: "Enterprise Tax and Compliance Management Platform",
       industry: "Financial Services / Tax Compliance",
@@ -56,14 +56,14 @@ export function CaseStudies() {
 
   return (
     <section
-      id="case-studies"
-      aria-labelledby="case-studies-heading"
+      id="professional-projects"
+      aria-labelledby="professional-projects-heading"
       className="bg-slate-50 py-14 md:py-20 scroll-mt-24"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center mb-12">
-          <h2 id="case-studies-heading" className="text-3xl sm:text-4xl text-slate-900 mb-4">
-            Case Studies
+          <h2 id="professional-projects-heading" className="text-3xl sm:text-4xl text-slate-900 mb-4">
+            Professional Projects
           </h2>
           <p className="text-lg text-slate-600">
             Real-world examples of how I&apos;ve helped organizations transform frontend engineering
@@ -71,63 +71,69 @@ export function CaseStudies() {
           </p>
         </div>
 
-        <div className="space-y-8 md:space-y-10">
-          {cases.map((caseStudy) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+          {projects.map((project) => (
             <article
-              key={caseStudy.title}
+              key={project.title}
               itemScope
               itemType="https://schema.org/CreativeWork"
               className="bg-white rounded-lg shadow-sm border border-slate-200 p-6 md:p-8 hover:shadow-md transition-shadow"
             >
               <header className="mb-4">
-                <h3 itemProp="name" className="text-xl md:text-2xl text-slate-900 mb-2">
-                  {caseStudy.title}
+                <h3 itemProp="name" className="text-xl text-slate-900 mb-2">
+                  {project.title}
                 </h3>
                 <p itemProp="about" className="text-blue-700 font-medium">
-                  {caseStudy.industry}
+                  {project.industry}
                 </p>
               </header>
 
+              <div className="h-px bg-linear-to-r from-transparent via-slate-300 to-transparent my-4" />
+
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-bold text-slate-900 mb-2">Challenge</h4>
+                  <h4 className="text-slate-900 mb-2">Challenge</h4>
                   <p itemProp="abstract" className="text-slate-700 text-[0.95rem]">
-                    {caseStudy.challenge}
+                    {project.challenge}
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-slate-900 mb-2">Solution</h4>
+                  <h4 className="text-slate-900 mb-2">Solution</h4>
                   <ul className="space-y-1">
-                    {caseStudy.solution.map((item) => (
-                      <li key={item} className="flex items-start text-slate-700">
-                        <CheckCircle
-                          size={16}
-                          aria-hidden="true"
-                          className="text-blue-700 mr-2 shrink-0 mt-1"
-                        />
-                        <span className="text-sm">{item}</span>
+                    {project.solution.map((item) => (
+                      <li key={item} className="flex items-start gap-2 leading-relaxed">
+                        <span className="text-slate-700">
+                            <Check className="w-4 h-4 shrink-0 mt-0.75" />
+                        </span>
+                        <span className="text-slate-700 text-[0.95rem]">
+                            {item}
+                        </span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-slate-900 mb-2">Results</h4>
-                  <ul className="grid sm:grid-cols-2 gap-2">
-                    {caseStudy.results.map((result) => (
-                      <li key={result} className="flex items-center text-slate-700">
-                        <Award size={16} aria-hidden="true" className="text-blue-700 mr-2 shrink-0" />
-                        <span className="text-sm">{result}</span>
+                  <h4 className="text-slate-900 mb-2">Business Impact</h4>
+                  <ul className="grid sm:grid-cols-1 gap-2">
+                    {project.results.map((result) => (
+                      <li key={result} className="flex items-start gap-2 leading-relaxed">
+                        <span className="text-slate-700">
+                            <Check className="w-4 h-4 shrink-0 mt-0.75" />
+                        </span>
+                        <span className="text-slate-700 text-[0.95rem]">
+                            {result}
+                        </span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-slate-900 mb-2">Technologies Used</h4>
+                  <h4 className="text-slate-900 mb-2">Technologies Used</h4>
                   <ul className="flex flex-wrap gap-2">
-                    {caseStudy.technologies.map((tech) => (
+                    {project.technologies.map((tech) => (
                       <li
                         key={tech}
                         itemProp="keywords"
@@ -144,7 +150,7 @@ export function CaseStudies() {
         </div>
 
         <p className="text-sm mt-8 text-slate-400">
-          Case studies reflect technical contributions across enterprise teams while respecting
+          Professional projects reflect technical contributions across enterprise teams while respecting
           client confidentiality and proprietary implementation details.
         </p>
       </div>

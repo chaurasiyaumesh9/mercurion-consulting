@@ -9,7 +9,7 @@ const menuItems = [
   { label: "About", href: "/#about" },
   { label: "Expertise", href: "/#expertise" },
   { label: "Services", href: "/#services" },
-  { label: "Case Studies", href: "/#case-studies" },
+  { label: "Professional Projects", href: "/#professional-projects" },
   { label: "Approach", href: "/#approach" },
   { label: "Contact", href: "/#contact" },
 ];
@@ -36,7 +36,7 @@ export function Navigation() {
             onClick={handleLogoClick}
             className="text-slate-300 text-lg tracking-tight"
           >
-            {/* Mercurion Consulting */}
+            <span className="block md:hidden">Mercurion Consulting</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

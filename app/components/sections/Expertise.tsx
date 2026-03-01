@@ -67,8 +67,8 @@ export function Expertise() {
               <ul className="space-y-2 md:space-y-2.5">
                 {area.items.map((item) => (
                   <li key={item} className="flex items-start gap-2 leading-relaxed">
-                    <span className="text-slate-700 text-[0.95rem] group-hover:text-slate-200">
-                        <Check className="w-5 h-5" />
+                    <span className="text-slate-700 group-hover:text-slate-200">
+                        <Check className="w-4 h-4 shrink-0 mt-0.75" />
                     </span>
                     <span className="text-slate-700 text-[0.95rem] group-hover:text-slate-200">
                       {item}

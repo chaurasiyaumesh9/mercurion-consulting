@@ -39,7 +39,6 @@ export default function HireAngularConsultantPage() {
         </div>
       </section>
 
-      {/* HIRING USE CASES */}
       <section className="bg-slate-50 py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-semibold text-slate-900 mb-10">

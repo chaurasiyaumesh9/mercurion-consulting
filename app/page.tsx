@@ -3,7 +3,7 @@ import { Footer } from "./components/layout/Footer";
 import HeroSection from "./components/sections/HeroSection";
 import { Expertise } from "./components/sections/Expertise";
 import { ConsultingServices } from "./components/sections/ConsultingServices";
-import { CaseStudies } from "./components/sections/CaseStudies";
+import { ProfessionalProjects } from "./components/sections/ProfessionalProjects";
 import { ConsultingApproach } from "./components/sections/ConsultingApproach";
 import { Contact } from "./components/sections/Contact";
 
@@ -14,7 +14,7 @@ export default function Home() {
       <HeroSection />
       <Expertise />
       <ConsultingServices />
-      <CaseStudies />
+      <ProfessionalProjects />
       <ConsultingApproach />
       <Contact />
       <Footer />
