@@ -1,5 +1,5 @@
-import { Breadcrumbs } from "@/app/components/Breadcrumbs";
-import { Navigation } from "@/app/components/Navigation";
+import { Navigation } from "@/app/components/layout/Navigation";
+import { Breadcrumbs } from "@/app/components/ui/Breadcrumbs";
 import {
   getBreadcrumbSchema,
   getServicePageSchema,
@@ -82,7 +82,7 @@ export default function FrontendPerformanceServicePage() {
         }}
       />
       <Navigation />
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-16">
         <Breadcrumbs items={breadcrumbItems} />
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">
