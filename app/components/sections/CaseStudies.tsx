@@ -55,10 +55,16 @@ export function CaseStudies() {
   ];
 
   return (
-    <section id="case-studies" className="bg-slate-50 py-14 md:py-20 scroll-mt-24">
+    <section
+      id="case-studies"
+      aria-labelledby="case-studies-heading"
+      className="bg-slate-50 py-14 md:py-20 scroll-mt-24"
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl text-slate-900 mb-4">Case Studies</h2>
+          <h2 id="case-studies-heading" className="text-3xl sm:text-4xl text-slate-900 mb-4">
+            Case Studies
+          </h2>
           <p className="text-lg text-slate-600">
             Real-world examples of how I&apos;ve helped organizations transform frontend engineering
             and deliver measurable outcomes
@@ -69,17 +75,25 @@ export function CaseStudies() {
           {cases.map((caseStudy) => (
             <article
               key={caseStudy.title}
+              itemScope
+              itemType="https://schema.org/CreativeWork"
               className="bg-white rounded-lg shadow-sm border border-slate-200 p-6 md:p-8 hover:shadow-md transition-shadow"
             >
-              <div className="mb-4">
-                <h3 className="text-xl md:text-2xl text-slate-900 mb-2">{caseStudy.title}</h3>
-                <p className="text-blue-700 font-medium">{caseStudy.industry}</p>
-              </div>
+              <header className="mb-4">
+                <h3 itemProp="name" className="text-xl md:text-2xl text-slate-900 mb-2">
+                  {caseStudy.title}
+                </h3>
+                <p itemProp="about" className="text-blue-700 font-medium">
+                  {caseStudy.industry}
+                </p>
+              </header>
 
               <div className="space-y-4">
                 <div>
                   <h4 className="font-bold text-slate-900 mb-2">Challenge</h4>
-                  <p className="text-slate-700 text-[0.95rem]">{caseStudy.challenge}</p>
+                  <p itemProp="abstract" className="text-slate-700 text-[0.95rem]">
+                    {caseStudy.challenge}
+                  </p>
                 </div>
 
                 <div>
@@ -87,7 +101,11 @@ export function CaseStudies() {
                   <ul className="space-y-1">
                     {caseStudy.solution.map((item) => (
                       <li key={item} className="flex items-start text-slate-700">
-                        <CheckCircle size={16} className="text-blue-700 mr-2 shrink-0 mt-1" />
+                        <CheckCircle
+                          size={16}
+                          aria-hidden="true"
+                          className="text-blue-700 mr-2 shrink-0 mt-1"
+                        />
                         <span className="text-sm">{item}</span>
                       </li>
                     ))}
@@ -96,28 +114,29 @@ export function CaseStudies() {
 
                 <div>
                   <h4 className="font-bold text-slate-900 mb-2">Results</h4>
-                  <div className="grid sm:grid-cols-2 gap-2">
+                  <ul className="grid sm:grid-cols-2 gap-2">
                     {caseStudy.results.map((result) => (
-                      <div key={result} className="flex items-center text-slate-700">
-                        <Award size={16} className="text-blue-700 mr-2 shrink-0" />
+                      <li key={result} className="flex items-center text-slate-700">
+                        <Award size={16} aria-hidden="true" className="text-blue-700 mr-2 shrink-0" />
                         <span className="text-sm">{result}</span>
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
 
                 <div>
                   <h4 className="font-bold text-slate-900 mb-2">Technologies Used</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <ul className="flex flex-wrap gap-2">
                     {caseStudy.technologies.map((tech) => (
-                      <span
+                      <li
                         key={tech}
+                        itemProp="keywords"
                         className="px-3 py-1 bg-slate-100 border border-slate-300 rounded-full text-sm text-slate-700"
                       >
                         {tech}
-                      </span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
             </article>

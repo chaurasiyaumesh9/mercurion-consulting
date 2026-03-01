@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Check, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,23 +33,32 @@ export default function HeroSection() {
           </p>
           <div className="border-b border-slate-300 py-2" />
 
-          <p className="mt-4 text-slate-700 leading-relaxed text-[0.9rem]">
+          <p className="mt-4 text-slate-700 leading-relaxed text-[0.95rem]">
             I help engineering teams modernize legacy Angular applications, improve frontend
             performance, and deliver stable, production-ready features for enterprise web
             platforms.
           </p>
-          <p className="mt-4 text-slate-700 leading-relaxed text-[0.9rem]">
+          <p className="mt-4 text-slate-700 leading-relaxed text-[0.95rem]">
             Specialized in Angular migrations, runtime performance optimization, large-scale feature
             delivery, and long-term maintenance of business-critical applications.
           </p>
 
-          <ul className="mt-4 space-y-1 text-slate-700 text-[0.9rem]">
-            <li>10+ Years Frontend Engineering Experience</li>
-            <li>Enterprise Production Systems</li>
-            <li>Distributed and Global Team Collaboration</li>
+          <ul className="mt-4 space-y-1 text-slate-700 text-[0.95rem]">
+            <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-slate-700 shrink-0 mt-0.5" />
+                <span>10+ Years Frontend Engineering Experience</span>
+            </li>
+            <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-slate-700 shrink-0 mt-0.5" />
+                <span>Enterprise Production Systems</span>
+            </li>
+            <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-slate-700 shrink-0 mt-0.5" />
+                <span>Distributed and Global Team Collaboration</span>
+            </li>
           </ul>
 
-          <p className="mt-4 text-slate-700 text-[0.9rem]">
+          <p className="mt-4 text-slate-700 text-[0.95rem]">
             Available for hire as a Senior Angular Consultant, Enterprise Angular Developer, or
             Frontend Architecture Consultant through remote consulting and contract engagements.
           </p>

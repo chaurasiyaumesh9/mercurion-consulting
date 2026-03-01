@@ -1,4 +1,4 @@
-import { BarChart, Rocket, Search, Wrench } from "lucide-react";
+import { BarChart, Check, Rocket, Search, Wrench } from "lucide-react";
 
 export function ConsultingApproach() {
   const steps = [
@@ -91,8 +91,10 @@ export function ConsultingApproach() {
                 <ul className="space-y-2 md:space-y-2.5">
                   {step.keyActivities.map((item) => (
                     <li key={item} className="flex items-start gap-2 leading-relaxed">
-                      <span className="text-slate-700 text-[0.95rem]">-</span>
-                      <span className="text-slate-700 text-[0.95rem]">{item}</span>
+                        <span className="text-slate-700 text-[0.95rem]">
+                            <Check className="w-5 h-5" />
+                        </span>
+                        <span className="text-slate-700 text-[0.95rem]">{item}</span>
                     </li>
                   ))}
                 </ul>

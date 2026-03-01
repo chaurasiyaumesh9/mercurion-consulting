@@ -8,6 +8,7 @@ import {
   organizationStructuredData
 } from "./lib/structuredData";
 import Script from "next/script";
+import { BackToTop } from "./components/ui/BackToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -131,6 +132,7 @@ export default function RootLayout({
             />
         </noscript>
         {children}
+        <BackToTop />
       </body>
     </html>
   );
