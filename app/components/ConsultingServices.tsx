@@ -75,7 +75,7 @@ export function ConsultingServices() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-[380px] object-cover"
+                      className="w-full h-[320px] object-cover"
                     />
                   </div>
                 </div>

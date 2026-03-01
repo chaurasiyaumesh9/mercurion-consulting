@@ -86,17 +86,17 @@ export function CaseStudies() {
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
+                  <h3 className="text-xl md:text-2xl text-slate-900 mb-2">
                     {caseStudy.title}
                   </h3>
-                  <p className="text-[#0A66C2] font-medium">{caseStudy.industry}</p>
+                  <p className="text-blue-700 font-medium">{caseStudy.industry}</p>
                 </div>
               </div>
 
               <div className="space-y-4">
                 <div>
                   <h4 className="font-bold text-slate-900 mb-2">Challenge</h4>
-                  <p className="text-slate-700">{caseStudy.challenge}</p>
+                  <p className="text-slate-700 text-[0.95rem]">{caseStudy.challenge}</p>
                 </div>
 
                 <div>
@@ -109,7 +109,7 @@ export function CaseStudies() {
                       >
                         <CheckCircle
                           size={16}
-                          className="text-[#0A66C2] mr-2 flex-shrink-0 mt-1"
+                          className="text-blue-700 mr-2 flex-shrink-0 mt-1"
                         />
                         <span className="text-sm">{item}</span>
                       </li>
@@ -127,9 +127,9 @@ export function CaseStudies() {
                       >
                         <Award
                           size={16}
-                          className="text-[#0A66C2] mr-2 flex-shrink-0"
+                          className="text-blue-700 mr-2 flex-shrink-0"
                         />
-                        <span className="text-sm font-medium">{result}</span>
+                        <span className="text-sm">{result}</span>
                       </div>
                     ))}
                   </div>
@@ -156,7 +156,7 @@ export function CaseStudies() {
         </div>
 
         {/* DISCLAIMER */}
-        <div className="text-sm mt-8 text-[#6B7280] max-w-4xl">
+        <div className="text-sm mt-8 text-slate-400">
           * Case studies reflect technical contributions across enterprise teams
           while respecting client confidentiality and proprietary implementation
           details.
