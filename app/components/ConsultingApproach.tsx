@@ -60,13 +60,13 @@ export function ConsultingApproach() {
     <section id="approach" className="bg-white py-14 md:py-20 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
             <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl text-slate-900 mb-4">
-                Technical Delivery Approach
-            </h2>
-            <p className="text-lg text-slate-600">
-                A proven methodology for delivering high-quality frontend solutions
-                on time and within budget
-            </p>
+                <h2 className="text-3xl sm:text-4xl text-slate-900 mb-4">
+                    Technical Delivery Approach
+                </h2>
+                <p className="text-lg text-slate-600">
+                    A proven methodology for delivering high-quality frontend solutions
+                    on time and within budget
+                </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">

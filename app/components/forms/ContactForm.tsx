@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, Paperclip } from "lucide-react";
+import { Mail, Phone, Paperclip, Send } from "lucide-react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -97,81 +97,98 @@ export default function ContactForm() {
   /* ================= UI ================= */
 
   return (
-    <section className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] py-20 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-          <h1 className="text-3xl md:text-4xl font-semibold text-[#1E293B] mb-4">
-            Contact / Enquiry
-          </h1>
+    <div className="bg-white p-8 rounded-2xl shadow-xl border border-slate-200">
+      {/* Progress */}
+      {status === "submitting" && (
+        <div className="w-full h-1 bg-blue-100 rounded mb-6 overflow-hidden">
+          <div className="h-full bg-blue-600 animate-pulse w-full" />
+        </div>
+      )}
 
-          {/* ⭐ NEW TOP INSTRUCTION */}
-          <div className="mb-8 bg-blue-50/70 backdrop-blur px-5 py-4 flex items-start gap-3">
-            <p className="text-sm text-blue-900 leading-relaxed">
-              Prefer email? Send your enquiry directly to{" "}
-              <span className="font-semibold">
-                contact@mercurionconsulting.com
-              </span>{" "}
-              or submit the form below.
-            </p>
+      {/* Success */}
+      {status === "success" && (
+        <div className="mb-6 p-4 bg-green-50 text-green-700">
+          ✅ Your message has been sent successfully. I'll get back to you soon!
+        </div>
+      )}
+
+      {/* Error */}
+      {status === "error" && (
+        <div className="mb-6 p-4 bg-red-50 text-red-700">❌ {errorMessage}</div>
+      )}
+
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid md:grid-cols-2 gap-6">
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-slate-900 mb-2"
+            >
+              Your Name *
+            </label>
+            <Field
+              value={form.name}
+              id="name"
+              name="name"
+              onChange={(v: string) => updateField("name", v)}
+              error={errors.name}
+              disabled={isSubmitting}
+            />
           </div>
 
-          {/* Progress */}
-          {status === "submitting" && (
-            <div className="w-full h-1 bg-blue-100 rounded mb-6 overflow-hidden">
-              <div className="h-full bg-blue-600 animate-pulse w-full" />
-            </div>
-          )}
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-slate-900 mb-2"
+            >
+              Email Address *
+            </label>
+            <Field
+              value={form.email}
+              onChange={(v: string) => updateField("email", v)}
+              error={errors.email}
+              icon={<Mail className="w-4 h-4" />}
+              disabled={isSubmitting}
+            />
+          </div>
 
-          {/* Success */}
-          {status === "success" && (
-            <div className="mb-6 p-4 bg-green-50 text-green-700">
-              ✅ Message sent successfully. I’ll get back to you soon.
-            </div>
-          )}
+          <div>
+            <label
+              htmlFor="phone*"
+              className="block text-sm font-medium text-slate-900 mb-2"
+            >
+              Phone Number
+            </label>
+            <Field
+              value={form.phone}
+              onChange={(v: string) => updateField("phone", v)}
+              error={errors.phone}
+              icon={<Phone className="w-4 h-4" />}
+              disabled={isSubmitting}
+            />
+          </div>
 
-          {/* Error */}
-          {status === "error" && (
-            <div className="mb-6 p-4 bg-red-50 text-red-700">
-              ❌ {errorMessage}
-            </div>
-          )}
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <Field
-                label="Full Name *"
-                value={form.name}
-                onChange={(v: string) => updateField("name", v)}
-                error={errors.name}
-                disabled={isSubmitting}
-              />
-
-              <Field
-                label="Work Email *"
-                value={form.email}
-                onChange={(v: string) => updateField("email", v)}
-                error={errors.email}
-                icon={<Mail className="w-4 h-4" />}
-                disabled={isSubmitting}
-              />
-
-              <Field
-                label="Phone"
-                value={form.phone}
-                onChange={(v: string) => updateField("phone", v)}
-                error={errors.phone}
-                icon={<Phone className="w-4 h-4" />}
-                disabled={isSubmitting}
-              />
-
-              <Field
-                label="Company"
-                value={form.company}
-                onChange={(v: string) => updateField("company", v)}
-                disabled={isSubmitting}
-              />
-            </div>
-            {/* Message */}
+          <div>
+            <label
+              htmlFor="company"
+              className="block text-sm font-medium text-slate-900 mb-2"
+            >
+              Company
+            </label>
+            <Field
+              value={form.company}
+              onChange={(v: string) => updateField("company", v)}
+              disabled={isSubmitting}
+            />
+          </div>
+        </div>
+        <div>
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-slate-900 mb-2"
+            >
+              Message *
+            </label>
             <textarea
               value={form.message}
               disabled={isSubmitting}
@@ -179,44 +196,43 @@ export default function ContactForm() {
               rows={5}
               className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500"
             />
-            {/* Attachment */}{" "}
-            <div>
+          </div>
+        {/* Attachment */}{" "}
+        <div>
+          {" "}
+          <label className="block text-sm font-medium text-[#334155] mb-2">
+            {" "}
+            Attachment (Optional){" "}
+          </label>{" "}
+          <label className="flex items-center gap-3 border border-dashed border-slate-300 rounded-lg px-4 py-3 cursor-pointer hover:bg-slate-50">
+            {" "}
+            <Paperclip className="w-4 h-4 text-slate-500" />{" "}
+            <span className="text-sm text-slate-600">
               {" "}
-              <label className="block text-sm font-medium text-[#334155] mb-2">
-                {" "}
-                Attachment (Optional){" "}
-              </label>{" "}
-              <label className="flex items-center gap-3 border border-dashed border-slate-300 rounded-lg px-4 py-3 cursor-pointer hover:bg-slate-50">
-                {" "}
-                <Paperclip className="w-4 h-4 text-slate-500" />{" "}
-                <span className="text-sm text-slate-600">
-                  {" "}
-                  {form.attachment
-                    ? form.attachment.name
-                    : "Upload Job Description / RFP"}{" "}
-                </span>{" "}
-                <input
-                  name="attachment"
-                  type="file"
-                  className="hidden"
-                  disabled={isSubmitting}
-                  onChange={(e) =>
-                    updateField("attachment", e.target.files?.[0] || null)
-                  }
-                />{" "}
-              </label>{" "}
-            </div>
-            <button
-              type="submit"
+              {form.attachment
+                ? form.attachment.name
+                : "Upload Job Description / RFP"}{" "}
+            </span>{" "}
+            <input
+              name="attachment"
+              type="file"
+              className="hidden"
               disabled={isSubmitting}
-              className="w-full bg-blue-600 text-white py-3 rounded-lg disabled:opacity-60"
-            >
-              {isSubmitting ? "Sending..." : "Send Enquiry"}
-            </button>
-          </form>
+              onChange={(e) =>
+                updateField("attachment", e.target.files?.[0] || null)
+              }
+            />{" "}
+          </label>{" "}
         </div>
-      </div>
-    </section>
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-blue-500 text-white px-6 py-4 rounded-xl font-medium hover:bg-blue-600 transition-all hover:scale-105 flex items-center justify-center shadow-lg"
+        >
+          <Send size={20} className="mr-2" /> {isSubmitting ? "Sending..." : "Send Message"}
+        </button>
+      </form>
+    </div>
   );
 }
 
