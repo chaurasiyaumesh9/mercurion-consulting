@@ -7,28 +7,28 @@ export function ConsultingServices() {
       description:
         "Hands-on development and technical execution for large-scale Angular applications. Supporting enterprise frontend platforms, complex data workflows, scalable state management, and multi-team codebase environments.",
       href: "/services/enterprise-angular-development",
-      image: "/services_1.jpg",
+      image: "/services_1.webp",
     },
     {
       title: "Angular Modernization and Frontend Migration",
       description:
         "Modernizing legacy AngularJS and older frontend architectures to modern Angular and scalable frontend platforms. Supporting migration strategy, dependency upgrades, codebase restructuring, and production-safe rollout execution.",
       href: "/services/angular-migration-modernization",
-      image: "/services_2.jpg",
+      image: "/services_2.webp",
     },
     {
       title: "Frontend Performance Optimization and Runtime Stability",
       description:
         "Improving performance, scalability, and runtime reliability of enterprise frontend applications. Covering bundle optimization, rendering performance tuning, Core Web Vitals improvements, and production performance issue analysis.",
       href: "/services/frontend-performance-optimization",
-      image: "/services_3.jpg",
+      image: "/services_3.webp",
     },
     {
       title: "Enterprise Frontend Delivery and Engineering Enablement",
       description:
         "Supporting engineering teams with code quality standards, CI/CD integration, release stability, debugging production issues, and improving frontend delivery workflows across distributed teams.",
       href: "/services/frontend-delivery-enablement",
-      image: "/services_4.jpg",
+      image: "/services_4.webp",
     },
   ];
 
