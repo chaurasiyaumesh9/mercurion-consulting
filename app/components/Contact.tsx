@@ -1,37 +1,7 @@
-"use client";
-import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import ContactForm from "./forms/ContactForm";
 
 export function Contact() {
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     company: "",
-//     message: "",
-//   });
-//   const [isSubmitted, setIsSubmitted] = useState(false);
-
-//   const handleSubmit = (e: React.FormEvent) => {
-//     e.preventDefault();
-//     // In a real application, this would send the data to a backend
-//     console.log("Form submitted:", formData);
-//     setIsSubmitted(true);
-//     setTimeout(() => {
-//       setIsSubmitted(false);
-//       setFormData({ name: "", email: "", company: "", message: "" });
-//     }, 3000);
-//   };
-
-//   const handleChange = (
-//     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-//   ) => {
-//     setFormData({
-//       ...formData,
-//       [e.target.name]: e.target.value,
-//     });
-//   };
-
   return (
     <section
       id="contact"
@@ -54,9 +24,7 @@ export function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl text-slate-300 mb-6">
-                Get in Touch
-              </h3>
+              <h3 className="text-2xl text-slate-300 mb-6">Get in Touch</h3>
               <p className="text-slate-300 text-lg leading-relaxed mb-8">
                 I'm currently available for freelance work and consulting
                 projects. Let's discuss how I can help you achieve your goals.
@@ -114,110 +82,7 @@ export function Contact() {
               </p>
             </div>
           </div>
-
-          {/* Contact Form */}
           <ContactForm />
-          {/* <div className="bg-slate-50 rounded-2xl p-8 shadow-xl border border-slate-200">
-            {!isSubmitted ? (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-slate-900 mb-2"
-                  >
-                    Your Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
-                    placeholder="John Doe"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-slate-900 mb-2"
-                  >
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
-                    placeholder="john@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="company"
-                    className="block text-sm font-medium text-slate-900 mb-2"
-                  >
-                    Company (Optional)
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
-                    placeholder="Your Company"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-slate-900 mb-2"
-                  >
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
-                    placeholder="Tell me about your project..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-blue-500 text-white px-6 py-4 rounded-xl font-medium hover:bg-blue-600 transition-all hover:scale-105 flex items-center justify-center shadow-lg"
-                >
-                  <Send size={20} className="mr-2" />
-                  Send Message
-                </button>
-              </form>
-            ) : (
-              <div className="flex flex-col items-center justify-center py-12">
-                <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mb-6">
-                  <CheckCircle size={40} className="text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">
-                  Thank You!
-                </h3>
-                <p className="text-slate-600 text-center">
-                  Your message has been sent successfully. I'll get back to you
-                  soon!
-                </p>
-              </div>
-            )}
-          </div> */}
         </div>
       </div>
     </section>

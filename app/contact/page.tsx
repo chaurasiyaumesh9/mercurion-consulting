@@ -23,7 +23,7 @@ export default function ContactPage() {
             </div>
             <ContactForm />
           </div>
-        </div>        
+        </div>
       </section>
     </div>
   );
