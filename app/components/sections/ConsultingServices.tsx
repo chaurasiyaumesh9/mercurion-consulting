@@ -50,7 +50,7 @@ export function ConsultingServices() {
               <div key={service.href} className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className={isReversed ? "md:order-2" : "md:order-1"}>
                   <div className="rounded-2xl overflow-hidden shadow-sm">
-                    <img src={service.image} alt={service.title} className="w-full h-80 object-cover" />
+                    <img src={service.image} loading="lazy" alt={service.title} className="w-full h-80 object-cover" />
                   </div>
                 </div>
 
