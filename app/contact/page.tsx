@@ -1,14 +1,14 @@
 import ContactForm from "../components/forms/ContactForm";
-import { Navigation } from "../components/Navigation";
+import { Navigation } from "../components/layout/Navigation";
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 md:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white p-8 md:p-12">
-            <h1 className="text-3xl md:text-4xl font-semibold text-[#1E293B] mb-4">
+            <h1 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4">
               Contact / Enquiry
             </h1>
 

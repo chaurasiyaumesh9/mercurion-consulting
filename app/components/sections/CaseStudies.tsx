@@ -1,9 +1,9 @@
-import { Award, CheckCircle, ChevronRight } from "lucide-react";
+import { Award, CheckCircle } from "lucide-react";
 
 export function CaseStudies() {
   const cases = [
     {
-      title: "Enterprise Tax & Compliance Management Platform",
+      title: "Enterprise Tax and Compliance Management Platform",
       industry: "Financial Services / Tax Compliance",
       challenge:
         "Enterprise tax workflow platform built on legacy monolithic Angular architecture experienced performance degradation during peak filing cycles and increasing maintenance overhead across multiple feature teams.",
@@ -21,7 +21,7 @@ export function CaseStudies() {
     },
     {
       title: "Enterprise Ecommerce Platform Modernization",
-      industry: "Retail & Ecommerce (B2C)",
+      industry: "Retail and Ecommerce (B2C)",
       challenge:
         "Legacy AngularJS storefront and internal admin workflows were slowing feature delivery and creating technical debt across product teams.",
       solution: [
@@ -34,13 +34,7 @@ export function CaseStudies() {
         "Developer productivity improved across shared UI modules",
         "Reduced maintenance overhead across legacy components",
       ],
-      technologies: [
-        "Angular JS",
-        "Angular 2",
-        "Rest APIs",
-        "Bootstrap",
-        "Webpack",
-      ],
+      technologies: ["AngularJS", "Angular 2", "Rest APIs", "Bootstrap", "Webpack"],
     },
     {
       title: "High Traffic Angular Commerce Frontend Performance Optimization",
@@ -56,41 +50,30 @@ export function CaseStudies() {
         "Measurable improvements in mobile performance scoring",
         "Conversion funnel latency reduced across checkout flow",
       ],
-      technologies: ["Angular 8", "Rest APIs", "RxJs", "Webpack"],
+      technologies: ["Angular 8", "Rest APIs", "RxJS", "Webpack"],
     },
   ];
 
   return (
-    <section
-      id="case-studies"
-      className="bg-slate-50 py-14 md:py-20 scroll-mt-24"
-    >
+    <section id="case-studies" className="bg-slate-50 py-14 md:py-20 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        {/* HEADER */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl text-slate-900 mb-4">
-            Case Studies
-          </h2>
+          <h2 className="text-3xl sm:text-4xl text-slate-900 mb-4">Case Studies</h2>
           <p className="text-lg text-slate-600">
-            Real-world examples of how I've helped organizations transform their
-            frontend engineering and deliver exceptional results
+            Real-world examples of how I&apos;ve helped organizations transform frontend engineering
+            and deliver measurable outcomes
           </p>
         </div>
 
-        {/* CASE LIST */}
         <div className="space-y-8 md:space-y-10">
-          {cases.map((caseStudy, index) => (
-            <div
-              key={index}
+          {cases.map((caseStudy) => (
+            <article
+              key={caseStudy.title}
               className="bg-white rounded-lg shadow-sm border border-slate-200 p-6 md:p-8 hover:shadow-md transition-shadow"
             >
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-xl md:text-2xl text-slate-900 mb-2">
-                    {caseStudy.title}
-                  </h3>
-                  <p className="text-blue-700 font-medium">{caseStudy.industry}</p>
-                </div>
+              <div className="mb-4">
+                <h3 className="text-xl md:text-2xl text-slate-900 mb-2">{caseStudy.title}</h3>
+                <p className="text-blue-700 font-medium">{caseStudy.industry}</p>
               </div>
 
               <div className="space-y-4">
@@ -102,15 +85,9 @@ export function CaseStudies() {
                 <div>
                   <h4 className="font-bold text-slate-900 mb-2">Solution</h4>
                   <ul className="space-y-1">
-                    {caseStudy.solution.map((item, itemIndex) => (
-                      <li
-                        key={itemIndex}
-                        className="flex items-start text-slate-700"
-                      >
-                        <CheckCircle
-                          size={16}
-                          className="text-blue-700 mr-2 shrink-0 mt-1"
-                        />
+                    {caseStudy.solution.map((item) => (
+                      <li key={item} className="flex items-start text-slate-700">
+                        <CheckCircle size={16} className="text-blue-700 mr-2 shrink-0 mt-1" />
                         <span className="text-sm">{item}</span>
                       </li>
                     ))}
@@ -120,15 +97,9 @@ export function CaseStudies() {
                 <div>
                   <h4 className="font-bold text-slate-900 mb-2">Results</h4>
                   <div className="grid sm:grid-cols-2 gap-2">
-                    {caseStudy.results.map((result, resultIndex) => (
-                      <div
-                        key={resultIndex}
-                        className="flex items-center text-slate-700"
-                      >
-                        <Award
-                          size={16}
-                          className="text-blue-700 mr-2 flex-shrink-0"
-                        />
+                    {caseStudy.results.map((result) => (
+                      <div key={result} className="flex items-center text-slate-700">
+                        <Award size={16} className="text-blue-700 mr-2 shrink-0" />
                         <span className="text-sm">{result}</span>
                       </div>
                     ))}
@@ -136,13 +107,11 @@ export function CaseStudies() {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-slate-900 mb-2">
-                    Technologies Used
-                  </h4>
+                  <h4 className="font-bold text-slate-900 mb-2">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
-                    {caseStudy.technologies.map((tech, techIndex) => (
+                    {caseStudy.technologies.map((tech) => (
                       <span
-                        key={techIndex}
+                        key={tech}
                         className="px-3 py-1 bg-slate-100 border border-slate-300 rounded-full text-sm text-slate-700"
                       >
                         {tech}
@@ -151,16 +120,14 @@ export function CaseStudies() {
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
-        {/* DISCLAIMER */}
-        <div className="text-sm mt-8 text-slate-400">
-          * Case studies reflect technical contributions across enterprise teams
-          while respecting client confidentiality and proprietary implementation
-          details.
-        </div>
+        <p className="text-sm mt-8 text-slate-400">
+          Case studies reflect technical contributions across enterprise teams while respecting
+          client confidentiality and proprietary implementation details.
+        </p>
       </div>
     </section>
   );

@@ -1,25 +1,21 @@
-import { Navigation } from "./components/Navigation";
-import { Hero } from "./components/Hero";
-import { Expertise } from "./components/Expertise";
-import { ConsultingServices } from "./components/ConsultingServices";
-import { CaseStudies } from "./components/CaseStudies";
-import { ConsultingApproach } from "./components/ConsultingApproach";
-import { Blog } from "./components/Blog";
-import { Contact } from "./components/Contact";
-import { HireSection } from "./components/HireSection";
-import { Footer } from "./components/Footer";
+import { Navigation } from "./components/layout/Navigation";
+import { Footer } from "./components/layout/Footer";
+import HeroSection from "./components/sections/HeroSection";
+import { Expertise } from "./components/sections/Expertise";
+import { ConsultingServices } from "./components/sections/ConsultingServices";
+import { CaseStudies } from "./components/sections/CaseStudies";
+import { ConsultingApproach } from "./components/sections/ConsultingApproach";
+import { Contact } from "./components/sections/Contact";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <Hero />
+      <HeroSection />
       <Expertise />
-      <ConsultingServices />      
+      <ConsultingServices />
       <CaseStudies />
       <ConsultingApproach />
-      {/* <Blog /> */}
-      {/* <HireSection /> */}
       <Contact />
       <Footer />
     </div>
