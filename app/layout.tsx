@@ -9,6 +9,8 @@ import {
 } from "./lib/structuredData";
 import Script from "next/script";
 import { BackToTop } from "./components/ui/BackToTop";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -133,6 +135,8 @@ export default function RootLayout({
         </noscript>
         {children}
         <BackToTop />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
