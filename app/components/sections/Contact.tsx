@@ -44,7 +44,7 @@ export function Contact() {
                   <Phone size={24} />
                 </div>
                 <a href="tel:+918707907092" className="text-slate-300 hover:text-blue-400 transition-colors">
-                  +91-8707907092
+                  +91-8407907092
                 </a>
               </div>
 
