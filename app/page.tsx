@@ -7,6 +7,7 @@ import { ConsultingApproach } from "./components/ConsultingApproach";
 import { Blog } from "./components/Blog";
 import { Contact } from "./components/Contact";
 import { HireSection } from "./components/HireSection";
+import { Footer } from "./components/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       {/* <Blog /> */}
       {/* <HireSection /> */}
       <Contact />
+      <Footer />
     </div>
   );
 }
