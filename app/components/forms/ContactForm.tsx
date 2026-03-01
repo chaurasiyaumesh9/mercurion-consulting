@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, Paperclip, Send } from "lucide-react";
+import { Mail, Phone, Paperclip, Send, CheckCircle } from "lucide-react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -97,7 +97,7 @@ export default function ContactForm() {
   /* ================= UI ================= */
 
   return (
-    <div className="bg-white p-8 rounded-2xl shadow-xl border border-slate-200">
+    <div className="bg-slate-50 rounded-2xl p-8 shadow-xl border border-slate-200">
       {/* Progress */}
       {status === "submitting" && (
         <div className="w-full h-1 bg-blue-100 rounded mb-6 overflow-hidden">
@@ -107,8 +107,14 @@ export default function ContactForm() {
 
       {/* Success */}
       {status === "success" && (
-        <div className="mb-6 p-4 bg-green-50 text-green-700">
-          ✅ Your message has been sent successfully. I'll get back to you soon!
+        <div className="flex flex-col items-center justify-center py-12">
+          <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mb-6">
+            <CheckCircle size={40} className="text-white" />
+          </div>
+          <h3 className="text-2xl font-bold text-slate-900 mb-2">Thank You!</h3>
+          <p className="text-slate-600 text-center">
+            Your message has been sent successfully. I'll get back to you soon!
+          </p>
         </div>
       )}
 
@@ -117,7 +123,7 @@ export default function ContactForm() {
         <div className="mb-6 p-4 bg-red-50 text-red-700">❌ {errorMessage}</div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      {status !== "success" && (<form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label
@@ -183,20 +189,20 @@ export default function ContactForm() {
           </div>
         </div>
         <div>
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-slate-900 mb-2"
-            >
-              Message *
-            </label>
-            <textarea
-              value={form.message}
-              disabled={isSubmitting}
-              onChange={(e) => updateField("message", e.target.value)}
-              rows={5}
-              className="w-full border border-slate-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          <label
+            htmlFor="message"
+            className="block text-sm font-medium text-slate-900 mb-2"
+          >
+            Message *
+          </label>
+          <textarea
+            value={form.message}
+            disabled={isSubmitting}
+            onChange={(e) => updateField("message", e.target.value)}
+            rows={5}
+            className="w-full border border-slate-200 bg-white rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
         {/* Attachment */}{" "}
         <div>
           {" "}
@@ -229,9 +235,10 @@ export default function ContactForm() {
           disabled={isSubmitting}
           className="w-full bg-blue-500 text-white px-6 py-4 rounded-xl font-medium hover:bg-blue-600 transition-all hover:scale-105 flex items-center justify-center shadow-lg"
         >
-          <Send size={20} className="mr-2" /> {isSubmitting ? "Sending..." : "Send Message"}
+          <Send size={20} className="mr-2" />{" "}
+          {isSubmitting ? "Sending..." : "Send Message"}
         </button>
-      </form>
+      </form>)}
     </div>
   );
 }
@@ -247,7 +254,7 @@ function Field({ label, value, onChange, error, icon, disabled }: any) {
           value={value}
           disabled={disabled}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full border rounded-lg px-4 py-3"
+          className="w-full bg-white border rounded-lg px-4 py-3"
         />
       </div>
       {error && <p className="text-red-500 text-xs">{error}</p>}
