@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "Mercurion Consulting",
     images: [
       {
-        url: "https://mercurionconsulting.com/og-image.jpg",
+        url: "https://mercurionconsulting.com/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Umesh Chaurasiya - Senior Angular Consultant",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
       "Senior Angular Consultant | Enterprise Frontend & Performance Engineering",
     description:
       "Angular migration, performance optimization, and enterprise frontend architecture consulting.",
-    images: ["https://mercurionconsulting.com/og-image.jpg"],
+    images: ["https://mercurionconsulting.com/og-image.webp"],
   },
   alternates: {
     canonical: "https://mercurionconsulting.com",

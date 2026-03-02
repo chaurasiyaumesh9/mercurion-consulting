@@ -9,6 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+        url: 'https://mercurionconsulting.com/contact',
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.9, // High priority - it's a conversion page
+    },
+    {
       url: 'https://mercurionconsulting.com/hire-angular-consultant',
       lastModified: new Date(),
       changeFrequency: 'monthly',

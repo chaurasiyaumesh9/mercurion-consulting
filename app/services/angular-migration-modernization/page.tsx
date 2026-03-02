@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     url: "https://mercurionconsulting.com/services/angular-migration-modernization",
     images: [
       {
-        url: "https://mercurionconsulting.com/og-image.jpg",
+        url: "https://mercurionconsulting.com/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Angular Migration Services by Umesh Chaurasiya",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Angular Migration Expert | Zero-Downtime Upgrades",
     description: "Expert AngularJS to Angular migration services for enterprises",
-    images: ["https://mercurionconsulting.com/og-image.jpg"],
+    images: ["https://mercurionconsulting.com/og-image.webp"],
   },
 };
 

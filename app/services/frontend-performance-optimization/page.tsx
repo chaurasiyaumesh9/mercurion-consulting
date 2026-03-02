@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     url: "https://mercurionconsulting.com/services/frontend-performance-optimization",
     images: [
       {
-        url: "https://mercurionconsulting.com/og-image.jpg",
+        url: "https://mercurionconsulting.com/og-image.webp",
         width: 1200,
         height: 630,
       },

@@ -13,7 +13,7 @@ export default function HeroSection() {
           />
           <div className="relative w-60 h-60 md:w-80 md:h-80 md:rounded-full border-8 border-white overflow-hidden">
             <Image
-              src="/umesh-profile.jpg"
+              src="/umesh-profile.webp"
               alt="Umesh Chaurasiya - Senior Angular Consultant and Frontend Performance Engineer"
               fill
               sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 280px"
