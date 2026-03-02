@@ -29,49 +29,63 @@ export const personStructuredData = {
 export const localBusinessStructuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://mercurionconsulting.com",
+  "@id": "https://mercurionconsulting.com/#services",
   name: "Mercurion Consulting",
   url: "https://mercurionconsulting.com",
   logo: "https://mercurionconsulting.com/logo.webp",
   image: "https://mercurionconsulting.com/og-image.webp",
   description:
-    "Mercurion Consulting provides expert Angular consulting services including enterprise Angular development, migration modernization, and frontend performance optimization.",
+    "Mercurion Consulting is a remote-first Angular consulting firm specializing in AngularJS to Angular 18 migration, enterprise Angular architecture, and performance optimization for financial services and SaaS platforms.",
   telephone: "+91-840-790-7092",
   priceRange: "$$$$",
-  areaServed: {
-    "@type": "Place",
-    name: "Worldwide",
+
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://mercurionconsulting.com/"
   },
+
+  provider: {
+    "@type": "Organization",
+    name: "Mercurion Consulting",
+    url: "https://mercurionconsulting.com"
+  },
+
+  areaServed: [
+    { "@type": "Country", name: "India" },
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "Germany" },
+    { "@type": "Country", name: "Switzerland" }
+  ],
+
   address: {
     "@type": "PostalAddress",
-    addressCountry: "US",
+    addressCountry: "IN"
   },
-  founder: {
-    "@type": "Person",
-    name: "Umesh Chaurasiya",
-    jobTitle: "Senior Angular Engineer & Frontend Consultant",
-    sameAs: [
-      "https://www.linkedin.com/in/uc1990/",
-      "https://github.com/chaurasiyaumesh9",
-    ],
-  },
-  sameAs: [
-    "https://www.linkedin.com/in/uc1990/",
-    "https://github.com/chaurasiyaumesh9",
-  ],
+
   serviceType: [
     "Angular Migration Services",
     "Enterprise Angular Development",
     "Frontend Performance Optimization",
-    "Angular Consulting Services",
+    "Angular Consulting Services"
+  ],
+
+  knowsAbout: [
+    "Angular 18",
+    "AngularJS Migration",
+    "Enterprise Angular Architecture",
+    "Frontend Performance Optimization",
+    "NgRx",
+    "RxJS",
+    "Tailwind CSS",
+    "Core Web Vitals"
   ],
 
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     opens: "11:00",
-    closes: "20:00",
-  },
+    closes: "20:00"
+  }
 };
 
 export const organizationStructuredData = {

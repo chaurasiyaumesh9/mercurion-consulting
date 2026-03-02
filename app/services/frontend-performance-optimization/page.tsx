@@ -10,10 +10,10 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Angular Performance Expert | Boost Your Core Web Vitals Score to 90+",
+    "Angular Performance Expert | Improve Core Web Vitals 40%+ | Free Analysis",
 
   description:
-    "Slow Angular app hurting conversions? I'll optimize your Core Web Vitals, reduce load time by 50%+, and improve SEO rankings. Results guaranteed. Performance audit included free.",
+    "Improve Core Web Vitals by 40%+ and reduce load time 50%. Expert Angular performance consulting for enterprise apps. 100+ optimizations completed. Free performance audit.",
 
   keywords: [
     "Angular Performance Optimization",

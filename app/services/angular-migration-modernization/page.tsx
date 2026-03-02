@@ -10,9 +10,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Angular Migration Expert | AngularJS to Angular 21 Upgrade Specialist",
+    "Angular Migration Expert | Migrate AngularJS→Angular in 90 Days | Zero Downtime",
   description:
-    "Expert Angular migration consultant. Migrate your AngularJS app to Angular 18 with zero downtime. 10+ years experience. Serving enterprises globally. Free consultation available.",
+    "Migrate your AngularJS app to Angular 18+ in 90 days with zero downtime. Trusted by 50+ enterprises. Proven incremental migration strategy. Free migration assessment.",
 
   keywords: [
     "Angular Migration Consultant",

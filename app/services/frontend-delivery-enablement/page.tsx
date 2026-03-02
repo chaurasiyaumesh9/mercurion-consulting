@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Frontend Platform Engineering | Double Your Team's Delivery Speed",
+    "Frontend Platform Engineering | Scale Teams & Delivery Speed | Enterprise Proven",
 
   description:
     "Slow frontend releases holding you back? I'll set up CI/CD pipelines, establish best practices, and accelerate your team's velocity. Proven to 2x delivery speed in 90 days.",

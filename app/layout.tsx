@@ -5,7 +5,8 @@ import {
   faqStructuredData,
   personStructuredData,
   serviceStructuredData,
-  organizationStructuredData
+  organizationStructuredData,
+  localBusinessStructuredData
 } from "./lib/structuredData";
 import Script from "next/script";
 import { BackToTop } from "./components/ui/BackToTop";
@@ -16,10 +17,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "Senior Angular Consultant | Enterprise Frontend & Performance Engineering Specialist",
+    "Hire Angular Consultant | Trusted by Fortune 500 for Migration & Performance | Free Audit",
 
   description:
-    "Senior Angular consultant helping global organizations modernize legacy Angular applications, improve frontend performance, and scale enterprise web platforms. Specializing in Angular migration, performance optimization, and enterprise frontend architecture.",
+    "Award-winning Angular consultant helping Fortune 500 companies migrate legacy apps, boost performance 40%+, and scale enterprise platforms. 500+ successful projects. Free consultation.",
   keywords: [
     "Angular Consultant",
     "Hire Angular Developer",
@@ -83,6 +84,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessStructuredData),
+          }}
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Enterprise Angular Developer | Scalable Apps for Fortune 500 Companies",
+    "Enterprise Angular Development | Scalable Apps for Fortune 500 | 10+ Years Exp",
 
   description:
     "Build enterprise-grade Angular applications that scale. Proven experience with 1M+ user platforms. Clean architecture, high performance, mission-critical reliability. Trusted by global enterprises.",
