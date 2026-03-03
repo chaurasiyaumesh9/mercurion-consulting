@@ -4,16 +4,17 @@ import {
   getBreadcrumbSchema,
   getServicePageSchema,
 } from "@/app/lib/structuredData";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ServiceCard } from "../components/ServiceCard";
 
 export const metadata: Metadata = {
   title:
-    "Angular Performance Expert | Boost Your Core Web Vitals Score to 90+",
+    "Angular Performance Expert | Improve Core Web Vitals 40%+ | Free Analysis",
 
   description:
-    "Slow Angular app hurting conversions? I'll optimize your Core Web Vitals, reduce load time by 50%+, and improve SEO rankings. Results guaranteed. Performance audit included free.",
+    "Improve Core Web Vitals by 40%+ and reduce load time 50%. Expert Angular performance consulting for enterprise apps. 100+ optimizations completed. Free performance audit.",
 
   keywords: [
     "Angular Performance Optimization",
@@ -21,6 +22,10 @@ export const metadata: Metadata = {
     "Frontend Performance Consultant",
     "Web Performance Engineering",
     "Angular Speed Optimization",
+    "angular performance optimization consultant US",
+    "core web vitals consultant for enterprise angular apps",
+    "angular runtime performance tuning consultant",
+    "remote angular performance consultant for enterprise",
   ],
 
   alternates: {
@@ -35,7 +40,7 @@ export const metadata: Metadata = {
     url: "https://mercurionconsulting.com/services/frontend-performance-optimization",
     images: [
       {
-        url: "https://mercurionconsulting.com/og-image.jpg",
+        url: "https://mercurionconsulting.com/og-image.webp",
         width: 1200,
         height: 630,
       },
@@ -68,7 +73,7 @@ export default function FrontendPerformanceServicePage() {
   );
 
   return (
-    <main className="bg-white">
+    <main className="min-h-screen bg-gray-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -82,164 +87,223 @@ export default function FrontendPerformanceServicePage() {
         }}
       />
       <Navigation />
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-16">
-        <Breadcrumbs items={breadcrumbItems} />
-        <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">
-            Frontend Performance Optimization Consulting
-          </h1>
-
-          <p className="mt-6 text-xl text-slate-600 leading-relaxed">
-            Helping enterprises diagnose and fix frontend performance
-            bottlenecks, improve Core Web Vitals, and scale Angular applications
-            for high traffic production environments.
-          </p>
-
-          <p className="mt-6 text-slate-600 leading-relaxed">
-            I work hands-on with engineering teams to identify real-world
-            performance issues, implement production-grade optimizations, and
-            establish long-term performance monitoring strategies.
-          </p>
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section className="bg-slate-50 py-14">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold text-slate-900 mb-10">
-            Enterprise Frontend Performance Services
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-10">
-            <ul className="space-y-4 text-slate-700">
-              <li>✓ Core Web Vitals Optimization (LCP, CLS, INP)</li>
-              <li>✓ Angular Change Detection & Rendering Optimization</li>
-              <li>✓ Bundle Size Reduction & Build Optimization</li>
-              <li>✓ Lazy Loading & Code Splitting Strategy</li>
-              <li>✓ SSR & Hydration Performance Optimization</li>
-            </ul>
-
-            <ul className="space-y-4 text-slate-700">
-              <li>✓ Runtime Performance Bottleneck Analysis</li>
-              <li>✓ Production Performance Debugging</li>
-              <li>✓ High Traffic Frontend Scaling Strategy</li>
-              <li>✓ Real User Monitoring (RUM) Analysis</li>
-              <li>✓ Performance Architecture Design</li>
-            </ul>
+      <section className="py-14 md:py-20 scroll-mt-24">
+        <div>
+          <div className="max-w-7xl mx-auto px-6 md:px-8 mb-8 mt-8">
+            <Breadcrumbs items={breadcrumbItems} />
           </div>
-        </div>
-      </section>
 
-      {/* APPROACH */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold text-slate-900 mb-10">
-            Performance Optimization Methodology
-          </h2>
-
-          <div className="space-y-10 max-w-3xl">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">
-                1. Real User Performance Analysis
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Analyze production telemetry, RUM data, and Core Web Vitals
-                trends to identify real user performance bottlenecks.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">
-                2. Architecture & Code Performance Audit
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Deep analysis of Angular rendering patterns, state flows, bundle
-                structure, and runtime performance hotspots.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">
-                3. Hands-on Performance Optimization
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Implement production-safe optimizations improving load time,
-                runtime performance, and user experience metrics.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">
-                4. Performance Monitoring & Guardrails
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Establish performance budgets, monitoring dashboards, and
-                alerting for long-term performance stability.
+          <div className="bg-white border-b border-gray-200">
+            <div className="max-w-7xl mx-auto px-6 py-16 text-center">
+              <h1 className="text-3xl sm:text-4xl text-slate-900 mb-4">
+                Frontend Performance Optimization Consulting
+              </h1>
+              <p className="text-lg text-slate-600">
+                Helping enterprises diagnose and fix frontend performance
+                bottlenecks, improve Core Web Vitals, and scale Angular
+                applications for high-traffic production environments.
               </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* OUTCOMES */}
-      <section className="bg-slate-50 py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold text-slate-900 mb-10">
-            Business Impact
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 border rounded-xl">
-              <h3 className="font-semibold text-slate-900">
-                Faster User Experience
-              </h3>
-              <p className="mt-3 text-slate-600 text-sm">
-                Faster load times and improved responsiveness across real user
-                journeys.
+          <div className="max-w-7xl mx-auto px-6 py-12">
+            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 mb-10">
+              <h2 className="text-[#1a2332] mb-6">
+                Angular Performance Optimization Consultant for US Enterprise Teams
+              </h2>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                I help product teams identify the exact causes of poor Core Web
+                Vitals and slow runtime behavior in Angular applications,
+                prioritize high-impact fixes, and validate gains in production.
+              </p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Typical engagements combine bundle strategy, rendering
+                optimization, RUM analysis, and regression guardrails for teams
+                operating in US, UK, Europe, and remote development models.
               </p>
             </div>
 
-            <div className="bg-white p-6 border rounded-xl">
-              <h3 className="font-semibold text-slate-900">
-                Better Conversion & Engagement
-              </h3>
-              <p className="mt-3 text-slate-600 text-sm">
-                Improved performance metrics directly impacting business KPIs.
-              </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <ServiceCard title="What I Do">
+                <p>
+                  I work hands-on with engineering teams to identify real-world
+                  performance issues, implement production-grade optimizations,
+                  and improve frontend responsiveness at scale.
+                </p>
+                <p>
+                  My focus is measurable performance improvement across loading,
+                  rendering, runtime execution, and monitoring guardrails for
+                  enterprise Angular platforms.
+                </p>
+              </ServiceCard>
+
+              <ServiceCard title="What's Included">
+                <p>
+                  Performance bottlenecks in enterprise applications can reduce
+                  conversion, impact engagement, and increase operational risk.
+                </p>
+                <p>
+                  A structured optimization program improves Core Web Vitals,
+                  runtime stability, and long-term performance governance across
+                  teams.
+                </p>
+              </ServiceCard>
+
+              <ServiceCard title="Why It Matters">
+                <div className="space-y-3">
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Core Web Vitals Optimization
+                    </h3>
+                    <p className="text-sm">
+                      Improve LCP, CLS, and INP with production-focused
+                      performance engineering.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Rendering & Change Detection Tuning
+                    </h3>
+                    <p className="text-sm">
+                      Optimize Angular rendering flows to reduce UI latency and
+                      unnecessary re-renders.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Bundle & Build Optimization
+                    </h3>
+                    <p className="text-sm">
+                      Reduce bundle size and improve build output for faster page
+                      delivery.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Lazy Loading & Runtime Strategy
+                    </h3>
+                    <p className="text-sm">
+                      Improve load behavior with targeted code splitting and
+                      runtime optimization patterns.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Production Bottleneck Debugging
+                    </h3>
+                    <p className="text-sm">
+                      Resolve real user performance issues using telemetry, RUM,
+                      and profiling data.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Monitoring & Performance Guardrails
+                    </h3>
+                    <p className="text-sm">
+                      Establish budgets, dashboards, and alerts to prevent
+                      regressions over time.
+                    </p>
+                  </div>
+                </div>
+              </ServiceCard>
+
+              <ServiceCard title="How I Execute">
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="text-[#1a2332] mb-1">
+                      1. Real User Performance Analysis
+                    </h4>
+                    <p className="text-sm">
+                      Analyze telemetry, RUM signals, and Core Web Vitals trends
+                      to locate high-impact bottlenecks.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-[#1a2332] mb-1">
+                      2. Code & Architecture Audit
+                    </h4>
+                    <p className="text-sm">
+                      Review rendering patterns, state flows, and asset delivery
+                      to prioritize optimization opportunities.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-[#1a2332] mb-1">
+                      3. Hands-on Optimization
+                    </h4>
+                    <p className="text-sm">
+                      Implement production-safe changes that improve load time,
+                      responsiveness, and stability.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-[#1a2332] mb-1">
+                      4. Monitoring & Handover
+                    </h4>
+                    <p className="text-sm">
+                      Set up performance guardrails and team practices for
+                      continuous improvement.
+                    </p>
+                  </div>
+                </div>
+              </ServiceCard>
             </div>
 
-            <div className="bg-white p-6 border rounded-xl">
-              <h3 className="font-semibold text-slate-900">
-                Production Stability
-              </h3>
-              <p className="mt-3 text-slate-600 text-sm">
-                Reduced performance regressions through monitoring and
-                guardrails.
+            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 mb-12">
+              <h2 className="text-[#1a2332] mb-6">Expected Outcomes</h2>
+              <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
+                <div>
+                  <h3 className="text-[#1a2332] mb-2">Faster User Experience</h3>
+                  <p className="text-sm text-gray-700">
+                    Better load and interaction performance across real user
+                    journeys.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-[#1a2332] mb-2">Stronger Business Metrics</h3>
+                  <p className="text-sm text-gray-700">
+                    Higher conversion and engagement driven by measurable
+                    performance gains.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-[#1a2332] mb-2">Stable Performance Baseline</h3>
+                  <p className="text-sm text-gray-700">
+                    Reduced regressions with ongoing monitoring and performance
+                    governance.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#1a2332] to-[#2a3f5f] rounded-xl p-12 text-center text-white">
+              <h2 className="text-white mb-3">
+                Need Help Improving Frontend Performance?
+              </h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Get hands-on support to improve Angular performance, Core Web
+                Vitals, and runtime stability at enterprise scale.
               </p>
+              <Link
+                href="/contact"
+                className="bg-[#0066ff] hover:bg-[#0052cc] text-white px-8 py-3 rounded-lg inline-flex items-center gap-2 transition-colors shadow-lg"
+              >
+                Discuss Performance Optimization
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-semibold text-slate-900">
-            Need Help Improving Frontend Performance?
-          </h2>
-
-          <p className="mt-6 text-slate-600">
-            I help global teams improve Angular performance, Core Web Vitals,
-            and production frontend scalability.
-          </p>
-
-          <Link
-            href="/contact"
-            className="inline-flex items-center mt-8 px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
-          >
-            <span>Discuss Performance Optimization</span>
-            <ChevronRight className="w-6 h-6" />
-          </Link>
         </div>
       </section>
     </main>

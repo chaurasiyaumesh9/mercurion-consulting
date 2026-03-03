@@ -3,7 +3,7 @@ export const personStructuredData = {
   "@type": "Person",
   name: "Umesh Chaurasiya",
   url: "https://mercurionconsulting.com",
-  image: "https://mercurionconsulting.com/umesh-profile.jpg",
+  image: "https://mercurionconsulting.com/umesh-profile.webp",
   jobTitle: "Senior Angular Consultant & Enterprise Frontend Engineer",
   worksFor: {
     "@type": "Organization",
@@ -26,12 +26,74 @@ export const personStructuredData = {
   ],
 };
 
+export const localBusinessStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://mercurionconsulting.com/#services",
+  name: "Mercurion Consulting",
+  url: "https://mercurionconsulting.com",
+  logo: "https://mercurionconsulting.com/logo.webp",
+  image: "https://mercurionconsulting.com/og-image.webp",
+  description:
+    "Mercurion Consulting is a remote-first Angular consulting firm specializing in AngularJS to Angular 18 migration, enterprise Angular architecture, and performance optimization for financial services and SaaS platforms.",
+  telephone: "+91-840-790-7092",
+  priceRange: "$$$$",
+
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://mercurionconsulting.com/"
+  },
+
+  provider: {
+    "@type": "Organization",
+    name: "Mercurion Consulting",
+    url: "https://mercurionconsulting.com"
+  },
+
+  areaServed: [
+    { "@type": "Country", name: "India" },
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "Germany" },
+    { "@type": "Country", name: "Switzerland" }
+  ],
+
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "IN"
+  },
+
+  serviceType: [
+    "Angular Migration Services",
+    "Enterprise Angular Development",
+    "Frontend Performance Optimization",
+    "Angular Consulting Services"
+  ],
+
+  knowsAbout: [
+    "Angular 18",
+    "AngularJS Migration",
+    "Enterprise Angular Architecture",
+    "Frontend Performance Optimization",
+    "NgRx",
+    "RxJS",
+    "Tailwind CSS",
+    "Core Web Vitals"
+  ],
+
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "11:00",
+    closes: "20:00"
+  }
+};
+
 export const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Mercurion Consulting",
   url: "https://mercurionconsulting.com",
-  logo: "https://mercurionconsulting.com/logo.png", // Add a logo file
+  logo: "https://mercurionconsulting.com/logo.webp", // Add a logo file
   description:
     "Enterprise Angular consulting services including modernization, migration, performance optimization, and frontend platform engineering.",
   founder: {
@@ -53,7 +115,7 @@ export const serviceStructuredData = {
   name: "Mercurion Consulting",
   url: "https://mercurionconsulting.com",
   logo: "https://mercurionconsulting.com/favicon.ico",
-  image: "https://mercurionconsulting.com/umesh-profile.jpg",
+  image: "https://mercurionconsulting.com/umesh-profile.webp",
   description:
     "Enterprise Angular consulting services including modernization, migration, performance optimization, and frontend platform engineering.",
   founder: {

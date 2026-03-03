@@ -5,7 +5,8 @@ import {
   faqStructuredData,
   personStructuredData,
   serviceStructuredData,
-  organizationStructuredData
+  organizationStructuredData,
+  localBusinessStructuredData
 } from "./lib/structuredData";
 import Script from "next/script";
 import { BackToTop } from "./components/ui/BackToTop";
@@ -16,10 +17,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "Senior Angular Consultant | Enterprise Frontend & Performance Engineering Specialist",
+    "Hire Angular Consultant | Trusted by Fortune 500 for Migration & Performance | Free Audit",
 
   description:
-    "Senior Angular consultant helping global organizations modernize legacy Angular applications, improve frontend performance, and scale enterprise web platforms. Specializing in Angular migration, performance optimization, and enterprise frontend architecture.",
+    "Award-winning Angular consultant helping Fortune 500 companies migrate legacy apps, boost performance 40%+, and scale enterprise platforms. 500+ successful projects. Free consultation.",
   keywords: [
     "Angular Consultant",
     "Hire Angular Developer",
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
     siteName: "Mercurion Consulting",
     images: [
       {
-        url: "https://mercurionconsulting.com/og-image.jpg",
+        url: "https://mercurionconsulting.com/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Umesh Chaurasiya - Senior Angular Consultant",
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
       "Senior Angular Consultant | Enterprise Frontend & Performance Engineering",
     description:
       "Angular migration, performance optimization, and enterprise frontend architecture consulting.",
-    images: ["https://mercurionconsulting.com/og-image.jpg"],
+    images: ["https://mercurionconsulting.com/og-image.webp"],
   },
   alternates: {
     canonical: "https://mercurionconsulting.com",
@@ -83,6 +84,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessStructuredData),
+          }}
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -110,29 +118,33 @@ export default function RootLayout({
             __html: JSON.stringify(faqStructuredData),
           }}
         />
-        <Script
-            id="gtm-script"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-                __html: `
-                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-NXD85WF5');
-                `,
-            }}
-        />
+        {process.env.NODE_ENV === "production" && (
+            <Script
+                id="gtm-script"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                    })(window,document,'script','dataLayer','GTM-NXD85WF5');
+                    `,
+                }}
+            />
+        )}
       </head>
       <body className={inter.className}>
-        <noscript>
-            <iframe
-                src="https://www.googletagmanager.com/ns.html?id=GTM-NXD85WF5"
-                height="0"
-                width="0"
-                style={{ display: "none", visibility: "hidden" }}
-            />
-        </noscript>
+        {process.env.NODE_ENV === "production" && (
+            <noscript>
+                <iframe
+                    src="https://www.googletagmanager.com/ns.html?id=GTM-NXD85WF5"
+                    height="0"
+                    width="0"
+                    style={{ display: "none", visibility: "hidden" }}
+                />
+            </noscript>
+        )}
         {children}
         <BackToTop />
         <Analytics />
