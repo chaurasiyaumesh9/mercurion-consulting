@@ -4,7 +4,7 @@ import {
   getBreadcrumbSchema,
   getServicePageSchema,
 } from "@/app/lib/structuredData";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceCard } from "../components/ServiceCard";
@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     "Angular Upgrade Specialist",
     "Enterprise Angular Migration",
     "Angular Modernization Expert",
+    "angularjs to angular 18 migration consultant",
+    "angular 2 to angular 18 upgrade consultant",
+    "angular migration service for financial services",
+    "zero downtime angular migration consultant",
+    "incremental angular migration strategy for enterprise",
   ],
 
   alternates: {
@@ -110,6 +115,25 @@ export default function AngularMigrationServicePage() {
           </div>
           {/* Main Content Grid */}
           <div className="max-w-7xl mx-auto px-6 py-12">
+            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 mb-10">
+              <h2 className="text-[#1a2332] mb-6">
+                Angular Migration for Financial Services and Regulated Teams
+              </h2>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                Many regulated organizations need an angular migration service
+                for financial services use cases where downtime and compliance
+                risk are unacceptable. I provide phased execution that protects
+                business continuity while modernizing legacy AngularJS and
+                Angular 2+ platforms.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>- Secure migration architecture for high-risk workflows</li>
+                <li>- Compliance-aware modernization for SOC 2 and PCI-DSS environments</li>
+                <li>- AngularJS to Angular 18 migration consultant guidance for phased rollout</li>
+                <li>- Angular 2 to Angular 18 upgrade planning with rollback safety</li>
+              </ul>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <ServiceCard title="What I Do">
                 <p>

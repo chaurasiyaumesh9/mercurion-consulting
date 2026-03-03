@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     "Developer Productivity Consulting",
     "Frontend Team Acceleration",
     "Frontend Infrastructure Consulting",
+    "frontend delivery consultant for distributed teams",
+    "hire remote angular consultant for enterprise delivery",
+    "enterprise frontend release engineering consultant",
+    "frontend enablement consulting US UK Europe",
   ],
 
   alternates: {
@@ -113,7 +117,8 @@ export default function FrontendDeliveryEnablementPage() {
                 <p>
                   My work combines platform engineering, release process design,
                   and hands-on execution to make frontend delivery predictable,
-                  scalable, and easier to operate.
+                  scalable, and easier to operate for enterprise teams working
+                  across multiple time zones and release trains.
                 </p>
               </ServiceCard>
 
@@ -126,7 +131,9 @@ export default function FrontendDeliveryEnablementPage() {
                 <p>
                   A structured enablement approach improves governance,
                   developer productivity, and deployment confidence while
-                  supporting long-term platform maturity.
+                  supporting long-term platform maturity for finance,
+                  healthcare, e-commerce, and SaaS teams across US, UK, Europe,
+                  and remote delivery organizations.
                 </p>
               </ServiceCard>
 
@@ -184,7 +191,7 @@ export default function FrontendDeliveryEnablementPage() {
 
                   <div>
                     <h3 className="text-[#1a2332] mb-2">
-                      Cross-Team Platform Alignment
+                      Cross-Team Platform Alignment for Remote Enterprise Delivery
                     </h3>
                     <p className="text-sm">
                       Shared architecture and governance models that support

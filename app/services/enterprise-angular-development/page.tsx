@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     "Angular Platform Engineering",
     "Enterprise Angular Architect",
     "Scalable Angular Architecture",
+    "enterprise angular architect for hire",
+    "hire remote angular consultant for enterprise",
+    "angular platform modernization consultant",
+    "enterprise angular development consultant US",
   ],
   alternates: {
     canonical:
@@ -111,7 +115,9 @@ export default function EnterpriseAngularDevelopmentPage() {
                 <p>
                   My role spans architecture design, technical standards,
                   hands-on implementation, and platform stabilization so teams
-                  can deliver consistently at enterprise scale.
+                  can deliver consistently at enterprise scale. This includes
+                  enterprise Angular architect for hire support for organizations
+                  running multi-team, long-horizon product platforms.
                 </p>
               </ServiceCard>
 
@@ -264,6 +270,19 @@ export default function EnterpriseAngularDevelopmentPage() {
                   </p>
                 </div>
               </div>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 mb-12">
+              <h2 className="text-[#1a2332] mb-6">
+                Remote Enterprise Angular Architecture Support
+              </h2>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                If you need to hire a remote Angular consultant for enterprise
+                platform work, I collaborate with engineering leaders across US,
+                UK, and Europe to define architecture standards, reduce
+                cross-team drift, and improve delivery throughput without
+                forcing a full platform rewrite.
+              </p>
             </div>
 
             <div className="bg-gradient-to-br from-[#1a2332] to-[#2a3f5f] rounded-xl p-12 text-center text-white">

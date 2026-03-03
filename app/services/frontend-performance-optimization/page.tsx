@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     "Frontend Performance Consultant",
     "Web Performance Engineering",
     "Angular Speed Optimization",
+    "angular performance optimization consultant US",
+    "core web vitals consultant for enterprise angular apps",
+    "angular runtime performance tuning consultant",
+    "remote angular performance consultant for enterprise",
   ],
 
   alternates: {
@@ -103,6 +107,22 @@ export default function FrontendPerformanceServicePage() {
           </div>
 
           <div className="max-w-7xl mx-auto px-6 py-12">
+            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 mb-10">
+              <h2 className="text-[#1a2332] mb-6">
+                Angular Performance Optimization Consultant for US Enterprise Teams
+              </h2>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                I help product teams identify the exact causes of poor Core Web
+                Vitals and slow runtime behavior in Angular applications,
+                prioritize high-impact fixes, and validate gains in production.
+              </p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Typical engagements combine bundle strategy, rendering
+                optimization, RUM analysis, and regression guardrails for teams
+                operating in US, UK, Europe, and remote development models.
+              </p>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <ServiceCard title="What I Do">
                 <p>
@@ -112,7 +132,8 @@ export default function FrontendPerformanceServicePage() {
                 </p>
                 <p>
                   My focus is measurable performance improvement across loading,
-                  rendering, runtime execution, and monitoring guardrails.
+                  rendering, runtime execution, and monitoring guardrails for
+                  enterprise Angular platforms.
                 </p>
               </ServiceCard>
 
