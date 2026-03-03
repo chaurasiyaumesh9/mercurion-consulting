@@ -4,9 +4,10 @@ import {
   getBreadcrumbSchema,
   getServicePageSchema,
 } from "@/app/lib/structuredData";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ServiceCard } from "../components/ServiceCard";
 
 export const metadata: Metadata = {
   title:
@@ -68,7 +69,7 @@ export default function FrontendDeliveryEnablementPage() {
   );
 
   return (
-    <main className="bg-white">
+    <main className="min-h-screen bg-gray-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -82,163 +83,208 @@ export default function FrontendDeliveryEnablementPage() {
         }}
       />
       <Navigation />
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-16">
-        <Breadcrumbs items={breadcrumbItems} />
-        <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">
-            Enterprise Frontend Delivery & Engineering Enablement Consulting
-          </h1>
-
-          <p className="mt-6 text-xl text-slate-600 leading-relaxed">
-            Helping enterprise engineering teams improve frontend delivery
-            reliability, developer productivity, and platform engineering
-            maturity for large-scale web applications.
-          </p>
-
-          <p className="mt-6 text-slate-600 leading-relaxed">
-            I work with distributed product and engineering teams to establish
-            frontend standards, improve CI/CD reliability, reduce production
-            incidents, and enable predictable delivery of business-critical
-            frontend systems.
-          </p>
-        </div>
-      </section>
-
-      {/* CAPABILITIES */}
-      <section className="bg-slate-50 py-14">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold text-slate-900 mb-10">
-            Frontend Delivery & Enablement Capabilities
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-10">
-            <ul className="space-y-4 text-slate-700">
-              <li>✓ Frontend Engineering Standards & Governance</li>
-              <li>✓ Enterprise CI/CD Integration & Release Engineering</li>
-              <li>✓ Production Stability & Incident Reduction Strategy</li>
-              <li>✓ Frontend Observability & Monitoring Strategy</li>
-              <li>✓ Cross-Team Frontend Architecture Alignment</li>
-            </ul>
-
-            <ul className="space-y-4 text-slate-700">
-              <li>✓ Developer Experience & Productivity Improvements</li>
-              <li>✓ Distributed Team Delivery Workflow Optimization</li>
-              <li>✓ Release Risk Reduction & Quality Gate Design</li>
-              <li>✓ Frontend Platform Governance Models</li>
-              <li>✓ Enterprise Frontend Code Quality Strategy</li>
-            </ul>
+      <section className="py-14 md:py-20 scroll-mt-24">
+        <div>
+          <div className="max-w-7xl mx-auto px-6 md:px-8 mb-8 mt-8">
+            <Breadcrumbs items={breadcrumbItems} />
           </div>
-        </div>
-      </section>
 
-      {/* DELIVERY MODEL */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold text-slate-900 mb-10">
-            Delivery Engagement Model
-          </h2>
-
-          <div className="space-y-10 max-w-3xl">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">
-                1. Engineering Delivery Assessment
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Evaluate frontend delivery pipelines, architecture risks,
-                production stability patterns, and team development workflows.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">
-                2. Frontend Platform & Delivery Strategy
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Define engineering standards, CI/CD reliability patterns,
-                release strategies, and platform governance models.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">
-                3. Hands-on Engineering & Enablement Execution
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Implement platform improvements, delivery automation,
-                observability, and production reliability improvements.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">
-                4. Team Enablement & Knowledge Transfer
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Enable teams to independently operate and evolve frontend
-                platforms with sustainable engineering practices.
+          <div className="bg-white border-b border-gray-200">
+            <div className="max-w-7xl mx-auto px-6 py-16 text-center">
+              <h1 className="text-3xl sm:text-4xl text-slate-900 mb-4">
+                Frontend Delivery & Engineering Enablement Consulting
+              </h1>
+              <p className="text-lg text-slate-600">
+                Helping enterprise engineering teams improve frontend delivery
+                reliability, developer productivity, and platform engineering
+                maturity for large-scale web applications.
               </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* BUSINESS VALUE */}
-      <section className="bg-slate-50 py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold text-slate-900 mb-10">
-            Business Outcomes
-          </h2>
+          <div className="max-w-7xl mx-auto px-6 py-12">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <ServiceCard title="What I Do">
+                <p>
+                  I help distributed product and engineering teams establish
+                  delivery standards, improve CI/CD reliability, and reduce
+                  production incidents in business-critical frontend systems.
+                </p>
+                <p>
+                  My work combines platform engineering, release process design,
+                  and hands-on execution to make frontend delivery predictable,
+                  scalable, and easier to operate.
+                </p>
+              </ServiceCard>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 border rounded-xl">
-              <h3 className="font-semibold text-slate-900">
-                Predictable Release Cycles
-              </h3>
-              <p className="mt-3 text-slate-600 text-sm">
-                Reduced release failures and improved deployment confidence.
-              </p>
+              <ServiceCard title="What's Included">
+                <p>
+                  Slow and unstable delivery pipelines create release risk,
+                  inconsistent quality, and reduced engineering velocity across
+                  teams.
+                </p>
+                <p>
+                  A structured enablement approach improves governance,
+                  developer productivity, and deployment confidence while
+                  supporting long-term platform maturity.
+                </p>
+              </ServiceCard>
+
+              <ServiceCard title="Why It Matters">
+                <div className="space-y-3">
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Engineering Standards & Governance
+                    </h3>
+                    <p className="text-sm">
+                      Clear frontend standards that improve consistency and code
+                      quality across teams.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      CI/CD & Release Engineering
+                    </h3>
+                    <p className="text-sm">
+                      Reliable delivery pipelines that reduce failed releases and
+                      improve deployment safety.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Production Stability Strategy
+                    </h3>
+                    <p className="text-sm">
+                      Preventive quality controls and risk management for
+                      enterprise-grade frontend operations.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Observability & Monitoring
+                    </h3>
+                    <p className="text-sm">
+                      Monitoring and alerting frameworks that improve incident
+                      response and runtime visibility.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Workflow & Productivity Optimization
+                    </h3>
+                    <p className="text-sm">
+                      Better developer experience and delivery workflows for
+                      faster, more predictable execution.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Cross-Team Platform Alignment
+                    </h3>
+                    <p className="text-sm">
+                      Shared architecture and governance models that support
+                      distributed engineering at scale.
+                    </p>
+                  </div>
+                </div>
+              </ServiceCard>
+
+              <ServiceCard title="How I Execute">
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="text-[#1a2332] mb-1">
+                      1. Delivery Assessment
+                    </h4>
+                    <p className="text-sm">
+                      Evaluate release pipelines, workflow bottlenecks, and
+                      production reliability risks.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-[#1a2332] mb-1">
+                      2. Platform & Delivery Strategy
+                    </h4>
+                    <p className="text-sm">
+                      Define standards, governance, and CI/CD patterns aligned
+                      with product and business goals.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-[#1a2332] mb-1">
+                      3. Hands-on Enablement Execution
+                    </h4>
+                    <p className="text-sm">
+                      Implement tooling, automation, and reliability
+                      improvements with direct engineering collaboration.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-[#1a2332] mb-1">
+                      4. Team Enablement & Handover
+                    </h4>
+                    <p className="text-sm">
+                      Establish sustainable workflows and knowledge transfer for
+                      long-term delivery performance.
+                    </p>
+                  </div>
+                </div>
+              </ServiceCard>
             </div>
 
-            <div className="bg-white p-6 border rounded-xl">
-              <h3 className="font-semibold text-slate-900">
-                Higher Developer Productivity
-              </h3>
-              <p className="mt-3 text-slate-600 text-sm">
-                Better tooling, workflows, and platform engineering maturity.
-              </p>
+            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 mb-12">
+              <h2 className="text-[#1a2332] mb-6">Expected Outcomes</h2>
+              <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
+                <div>
+                  <h3 className="text-[#1a2332] mb-2">Predictable Releases</h3>
+                  <p className="text-sm text-gray-700">
+                    Lower release risk and higher deployment confidence across
+                    environments.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-[#1a2332] mb-2">Higher Team Velocity</h3>
+                  <p className="text-sm text-gray-700">
+                    Improved productivity through better tooling and delivery
+                    workflows.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-[#1a2332] mb-2">Operational Stability</h3>
+                  <p className="text-sm text-gray-700">
+                    Reduced incident frequency with stronger quality and
+                    observability guardrails.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-white p-6 border rounded-xl">
-              <h3 className="font-semibold text-slate-900">
-                Reduced Production Incidents
-              </h3>
-              <p className="mt-3 text-slate-600 text-sm">
-                Improved observability, stability strategy, and release quality.
+            <div className="bg-gradient-to-br from-[#1a2332] to-[#2a3f5f] rounded-xl p-12 text-center text-white">
+              <h2 className="text-white mb-3">
+                Improve Your Frontend Delivery & Engineering Velocity
+              </h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Support for global teams building and operating
+                mission-critical frontend platforms.
               </p>
+              <Link
+                href="/contact"
+                className="bg-[#0066ff] hover:bg-[#0052cc] text-white px-8 py-3 rounded-lg inline-flex items-center gap-2 transition-colors shadow-lg"
+              >
+                Discuss Frontend Delivery Consulting
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-semibold text-slate-900">
-            Improve Your Frontend Delivery & Engineering Velocity
-          </h2>
-
-          <p className="mt-6 text-slate-600">
-            Supporting global engineering teams building and operating
-            mission-critical frontend platforms.
-          </p>
-
-          <Link
-            href="/contact"
-            className="inline-flex items-center mt-8 px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
-          >
-            <span>Discuss Frontend Delivery Consulting</span>
-            <ChevronRight className="w-6 h-6" />
-          </Link>
         </div>
       </section>
     </main>
