@@ -4,9 +4,10 @@ import {
   getBreadcrumbSchema,
   getServicePageSchema,
 } from "@/app/lib/structuredData";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ServiceCard } from "../components/ServiceCard";
 
 export const metadata: Metadata = {
   title:
@@ -44,7 +45,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Angular Migration Expert | Zero-Downtime Upgrades",
-    description: "Expert AngularJS to Angular migration services for enterprises",
+    description:
+      "Expert AngularJS to Angular migration services for enterprises",
     images: ["https://mercurionconsulting.com/og-image.webp"],
   },
 };
@@ -73,7 +75,7 @@ export default function AngularMigrationServicePage() {
     "https://mercurionconsulting.com/services/angular-migration-modernization",
   );
   return (
-    <main className="bg-white">
+    <main className="min-h-screen bg-gray-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -87,161 +89,214 @@ export default function AngularMigrationServicePage() {
         }}
       />
       <Navigation />
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-16">
-        <Breadcrumbs items={breadcrumbItems} />
-        <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">
-            Angular Migration & Modernization Consulting
-          </h1>
-
-          <p className="mt-6 text-xl text-slate-600 leading-relaxed">
-            Helping enterprises safely migrate legacy AngularJS and older
-            Angular applications to modern, scalable Angular architectures —
-            with minimal business disruption and production risk.
-          </p>
-
-          <p className="mt-6 text-slate-600 leading-relaxed">
-            I work hands-on with engineering teams to modernize enterprise
-            frontend platforms, reduce technical debt, improve performance, and
-            establish scalable frontend foundations for long-term product
-            evolution.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-slate-50 py-14">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold text-slate-900 mb-10">
-            Enterprise Angular Migration Services
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-10">
-            <ul className="space-y-4 text-slate-700">
-              <li>✓ AngularJS to Modern Angular Migration</li>
-              <li>✓ Legacy Angular Version Upgrade (v2 → Latest)</li>
-              <li>✓ Monolith to Modular Angular Architecture Refactoring</li>
-              <li>✓ Enterprise Frontend Platform Modernization</li>
-              <li>✓ Performance Optimization During Migration</li>
-            </ul>
-
-            <ul className="space-y-4 text-slate-700">
-              <li>✓ Incremental / Strangler Migration Strategy</li>
-              <li>✓ Hybrid Routing & Co-existence Architecture</li>
-              <li>✓ State Management Modernization (NgRx / Signals)</li>
-              <li>✓ Build Pipeline & CI/CD Modernization</li>
-              <li>✓ Production Stability & Risk Mitigation</li>
-            </ul>
+      <section className="py-14 md:py-20 scroll-mt-24">
+        <div className="">
+          <div className="max-w-7xl mx-auto px-6 md:px-8 mb-8 mt-8">
+            <Breadcrumbs items={breadcrumbItems} />
           </div>
-        </div>
-      </section>
 
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold text-slate-900 mb-10">
-            Proven Enterprise Migration Approach
-          </h2>
-
-          <div className="space-y-10 max-w-3xl">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">
-                1. Technical Audit & Migration Feasibility
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Deep codebase analysis, dependency audit, performance baseline
-                measurement, and migration complexity assessment across modules.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">
-                2. Migration Strategy & Roadmap
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Define phased migration strategy balancing business priorities,
-                release timelines, and production risk management.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">
-                3. Hands-on Migration Execution
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Work directly with engineering teams implementing module
-                migrations, architecture improvements, and performance tuning.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900">
-                4. Stabilization & Knowledge Transfer
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Documentation, upgrade playbooks, and team enablement for
-                long-term maintainability.
+          {/* Hero Section */}
+          <div className="bg-white border-b border-gray-200">
+            <div className="max-w-7xl mx-auto px-6 py-16 text-center">
+              <h1 className="text-3xl sm:text-4xl text-slate-900 mb-4">
+                Angular Migration & Modernization Consulting
+              </h1>
+              <p className="text-lg text-slate-600">
+                Structured AngularJS and legacy Angular migrations for
+                enterprise applications that require architectural stability,
+                risk control, and production-safe delivery.
               </p>
             </div>
           </div>
-        </div>
-      </section>
+          {/* Main Content Grid */}
+          <div className="max-w-7xl mx-auto px-6 py-12">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <ServiceCard title="What I Do">
+                <p>
+                  I help enterprise engineering teams migrate AngularJS and
+                  older Angular applications (v2+) to modern Angular 18
+                  architectures using incremental, zero-downtime strategies.
+                </p>
+                <p>
+                  My role spans technical audit, migration roadmap design,
+                  hands-on execution, and performance stabilization — ensuring
+                  modernization strengthens your architecture instead of
+                  disrupting delivery.
+                </p>
+              </ServiceCard>
 
-      <section className="bg-slate-50 py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold text-slate-900 mb-10">
-            Typical Enterprise Outcomes
-          </h2>
+              <ServiceCard title="What's Included">
+                <p>
+                  Legacy Angular architectures increase release risk, slow
+                  feature velocity, and create long-term technical debt.
+                  Large-scale upgrades without structured planning can introduce
+                  instability, regressions, and costly downtime.
+                </p>
+                <p>
+                  A controlled, phased migration strategy allows teams to
+                  modernize safely while maintaining production reliability and
+                  protecting business continuity.
+                </p>
+              </ServiceCard>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 border rounded-xl">
-              <h3 className="font-semibold text-slate-900">
-                Reduced Technical Debt
-              </h3>
-              <p className="mt-3 text-slate-600 text-sm">
-                Remove legacy constraints blocking product innovation and
-                feature velocity.
-              </p>
+              <ServiceCard title="Why It Matters">
+                <div className="space-y-3">
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Migration Assessment & Architecture Audit
+                    </h3>
+                    <p className="text-sm">
+                      Codebase analysis, dependency review, performance
+                      baselining, and migration feasibility evaluation.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Incremental Migration Strategy
+                    </h3>
+                    <p className="text-sm">
+                      Phase-based or Angular co-existence models using
+                      strangler-pattern execution.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Angular 2 → Angular 18 Upgrades
+                    </h3>
+                    <p className="text-sm">
+                      Structured version upgrades including RxJS refactoring,
+                      NgRx modernization, and signals adoption.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Platform & CI/CD Modernization
+                    </h3>
+                    <p className="text-sm">
+                      Build pipeline improvements, modular architecture
+                      refactoring and release process stabilization.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Performance Optimization
+                    </h3>
+                    <p className="text-sm">
+                      Runtime profiling, bundle size reduction, and Core Web
+                      Vitals improvements during migration.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-[#1a2332] mb-2">
+                      Knowledge Transfer & Documentation
+                    </h3>
+                    <p className="text-sm">
+                      Migration playbooks and team enablement for long-term
+                      maintainability.
+                    </p>
+                  </div>
+                </div>
+              </ServiceCard>
+
+              <ServiceCard title="How I Execute">
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="text-[#1a2332] mb-1">
+                      1. Technical Discovery
+                    </h4>
+                    <p className="text-sm">
+                      Deep architectural review to assess migration complexity,
+                      integration points, and production risk.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-[#1a2332] mb-1">
+                      2. Phased Roadmap Design
+                    </h4>
+                    <p className="text-sm">
+                      Migration plan aligned with release cycles and business
+                      milestones.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-[#1a2332] mb-1">
+                      3. Hands-on Execution
+                    </h4>
+                    <p className="text-sm">
+                      Direct collaboration with your engineering teams to
+                      implement module migrations and architecture improvements.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-[#1a2332] mb-1">
+                      4. Stabilization & Optimization
+                    </h4>
+                    <p className="text-sm">
+                      Production monitoring, performance refinement and
+                      post-migration validation.
+                    </p>
+                  </div>
+                </div>
+              </ServiceCard>
             </div>
 
-            <div className="bg-white p-6 border rounded-xl">
-              <h3 className="font-semibold text-slate-900">
-                Improved Performance
-              </h3>
-              <p className="mt-3 text-slate-600 text-sm">
-                Better Core Web Vitals, faster builds, improved runtime
-                performance.
-              </p>
+            {/* Expected Outcomes Section */}
+            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 mb-12">
+              <h2 className="text-[#1a2332] mb-6">Expected Outcomes</h2>
+              <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
+                <div>
+                  <h3 className="text-[#1a2332] mb-2">
+                    Reduced Technical Debt
+                  </h3>
+                  <p className="text-sm text-gray-700">
+                    Modernized architecture that supports faster feature
+                    delivery.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-[#1a2332] mb-2">Improved Performance</h3>
+                  <p className="text-sm text-gray-700">
+                    Faster builds, improved runtime stability, and better Core
+                    Web Vitals.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-[#1a2332] mb-2">
+                    Long-Term Maintainability
+                  </h3>
+                  <p className="text-sm text-gray-700">
+                    Scalable Angular platform ready for multi-team enterprise
+                    growth.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-white p-6 border rounded-xl">
-              <h3 className="font-semibold text-slate-900">
-                Future-Ready Architecture
-              </h3>
-              <p className="mt-3 text-slate-600 text-sm">
-                Scalable Angular platform ready for multi-team development.
+            {/* CTA Section */}
+            <div className="bg-gradient-to-br from-[#1a2332] to-[#2a3f5f] rounded-xl p-12 text-center text-white">
+              <h2 className="text-white mb-3">
+                Planning an Angular Migration?
+              </h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let's define a structured migration roadmap tailored to your
+                enterprise architecture.
               </p>
+              <Link href="/contact" className="bg-[#0066ff] hover:bg-[#0052cc] text-white px-8 py-3 rounded-lg inline-flex items-center gap-2 transition-colors shadow-lg">
+                Discuss Your Migration
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-semibold text-slate-900">
-            Planning an Angular Migration?
-          </h2>
-
-          <p className="mt-6 text-slate-600">
-            I help global teams execute safe, production-ready Angular
-            migrations with minimal business disruption.
-          </p>
-
-          <Link
-            href="/contact"
-            className="inline-flex items-center mt-8 px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
-          >
-            <span>Discuss Your Migration</span>
-            <ChevronRight className="w-6 h-6" />
-          </Link>
         </div>
       </section>
     </main>
