@@ -125,12 +125,12 @@ export default function FrontendPerformanceServicePage() {
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <ServiceCard title="What I Do">
-                <p>
+                <p className="text-sm">
                   I work hands-on with engineering teams to identify real-world
                   performance issues, implement production-grade optimizations,
                   and improve frontend responsiveness at scale.
                 </p>
-                <p>
+                <p className="text-sm">
                   My focus is measurable performance improvement across loading,
                   rendering, runtime execution, and monitoring guardrails for
                   enterprise Angular platforms.
@@ -138,11 +138,11 @@ export default function FrontendPerformanceServicePage() {
               </ServiceCard>
 
               <ServiceCard title="What's Included">
-                <p>
+                <p className="text-sm">
                   Performance bottlenecks in enterprise applications can reduce
                   conversion, impact engagement, and increase operational risk.
                 </p>
-                <p>
+                <p className="text-sm">
                   A structured optimization program improves Core Web Vitals,
                   runtime stability, and long-term performance governance across
                   teams.

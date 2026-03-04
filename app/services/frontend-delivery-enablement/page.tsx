@@ -109,12 +109,12 @@ export default function FrontendDeliveryEnablementPage() {
           <div className="max-w-7xl mx-auto px-6 py-12">
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <ServiceCard title="What I Do">
-                <p>
+                <p className="text-sm">
                   I help distributed product and engineering teams establish
                   delivery standards, improve CI/CD reliability, and reduce
                   production incidents in business-critical frontend systems.
                 </p>
-                <p>
+                <p className="text-sm">
                   My work combines platform engineering, release process design,
                   and hands-on execution to make frontend delivery predictable,
                   scalable, and easier to operate for enterprise teams working
@@ -123,12 +123,12 @@ export default function FrontendDeliveryEnablementPage() {
               </ServiceCard>
 
               <ServiceCard title="What's Included">
-                <p>
+                <p className="text-sm">
                   Slow and unstable delivery pipelines create release risk,
                   inconsistent quality, and reduced engineering velocity across
                   teams.
                 </p>
-                <p>
+                <p className="text-sm">
                   A structured enablement approach improves governance,
                   developer productivity, and deployment confidence while
                   supporting long-term platform maturity for finance,

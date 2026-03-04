@@ -8,6 +8,8 @@ export function ConsultingServices() {
         "Hands-on development and technical execution for large-scale Angular applications. Supporting enterprise frontend platforms, complex data workflows, scalable state management, and multi-team codebase environments.",
       href: "/services/enterprise-angular-development",
       image: "/services_1.webp",
+      ariaLabel:
+      "Learn more about Enterprise Angular Development and Platform Engineering consulting services",
     },
     {
       title: "Angular Modernization and Frontend Migration",
@@ -15,6 +17,8 @@ export function ConsultingServices() {
         "Modernizing legacy AngularJS and older frontend architectures to modern Angular and scalable frontend platforms. Supporting migration strategy, dependency upgrades, codebase restructuring, and production-safe rollout execution.",
       href: "/services/angular-migration-modernization",
       image: "/services_2.webp",
+      ariaLabel:
+      "Learn more about Angular Modernization and AngularJS to Angular migration consulting services",
     },
     {
       title: "Frontend Performance Optimization and Runtime Stability",
@@ -22,6 +26,8 @@ export function ConsultingServices() {
         "Improving performance, scalability, and runtime reliability of enterprise frontend applications. Covering bundle optimization, rendering performance tuning, Core Web Vitals improvements, and production performance issue analysis.",
       href: "/services/frontend-performance-optimization",
       image: "/services_3.webp",
+      ariaLabel:
+      "Learn more about Angular frontend performance optimization consulting services",
     },
     {
       title: "Enterprise Frontend Delivery and Engineering Enablement",
@@ -29,6 +35,8 @@ export function ConsultingServices() {
         "Supporting engineering teams with code quality standards, CI/CD integration, release stability, debugging production issues, and improving frontend delivery workflows across distributed teams.",
       href: "/services/frontend-delivery-enablement",
       image: "/services_4.webp",
+      ariaLabel:
+      "Learn more about frontend delivery enablement and engineering consulting services",
     },
   ];
 
@@ -62,6 +70,7 @@ export function ConsultingServices() {
                   <div className="mt-6">
                     <Link
                       href={service.href}
+                      aria-label={service.ariaLabel}
                       className="inline-block bg-blue-700 text-white px-8 py-3 rounded-md shadow-md hover:shadow-lg text-base font-medium hover:bg-blue-800 transition"
                     >
                       Learn More
