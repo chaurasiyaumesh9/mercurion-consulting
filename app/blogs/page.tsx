@@ -56,9 +56,9 @@ export default function BlogsPage() {
 
         <div className="bg-white border-y border-gray-200">
           <div className="max-w-7xl mx-auto px-6 md:px-8 py-14 text-center">
-            <h1 className="text-3xl sm:text-4xl text-slate-900 mb-4">Latest Projects</h1>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              This blog highlights recent Angular work across architecture,
+            <h1 className="text-3xl sm:text-4xl text-slate-900 mb-4">Latest Blogs</h1>
+            <p className="text-lg text-slate-600">
+              These blogs highlights recent Angular work across architecture,
               migration, performance, and enterprise delivery execution.
             </p>
           </div>

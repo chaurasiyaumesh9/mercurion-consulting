@@ -74,7 +74,7 @@ export function BlogArticleLayout({
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="max-w-5xl mx-auto bg-white rounded-xl border border-gray-100 p-8 md:p-12 shadow-sm">
+          <div className="bg-white rounded-xl border border-gray-100 p-8 md:p-12 shadow-sm">
             <p className="text-sm text-slate-500 mb-3">Published: {publishedAt}</p>
             <h1 className="text-3xl sm:text-4xl text-slate-900 mb-6 leading-tight">{title}</h1>
             <p className="text-gray-700 leading-relaxed mb-10">{description}</p>
