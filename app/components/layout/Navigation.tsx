@@ -8,9 +8,11 @@ import { type MouseEvent, useState } from "react";
 const menuItems = [
   { label: "About", href: "/#about" },
   { label: "Expertise", href: "/#expertise" },
-  { label: "Services", href: "/#services" },
+  { label: "Services", href: "/#services" },  
   { label: "Professional Projects", href: "/#professional-projects" },
   { label: "Approach", href: "/#approach" },
+  { label: "Blogs", href: "/blogs" },
+  { label: "Hire", href: "/hire-angular-consultant" },
   { label: "Contact", href: "/#contact" },
 ];
 
