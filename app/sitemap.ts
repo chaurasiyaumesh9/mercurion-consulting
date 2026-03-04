@@ -21,6 +21,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: 'https://mercurionconsulting.com/hire-angular-consultant-usa',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'https://mercurionconsulting.com/hire-angular-consultant-uk',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'https://mercurionconsulting.com/hire-angular-consultant-europe',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'https://mercurionconsulting.com/remote-angular-consultant',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: 'https://mercurionconsulting.com/services/angular-migration-modernization',
       lastModified: new Date(),
       changeFrequency: 'monthly',

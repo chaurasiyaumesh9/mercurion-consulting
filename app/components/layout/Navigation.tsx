@@ -9,6 +9,7 @@ const menuItems = [
   { label: "About", href: "/#about" },
   { label: "Expertise", href: "/#expertise" },
   { label: "Services", href: "/#services" },
+  { label: "Hire", href: "/hire-angular-consultant" },
   { label: "Professional Projects", href: "/#professional-projects" },
   { label: "Approach", href: "/#approach" },
   { label: "Contact", href: "/#contact" },
