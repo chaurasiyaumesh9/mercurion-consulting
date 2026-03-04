@@ -108,11 +108,11 @@ export default function EnterpriseAngularDevelopmentPage() {
           <div className="max-w-7xl mx-auto px-6 py-12">
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <ServiceCard title="What I Do">
-                <p>
+                <p className="text-sm">
                   I help organizations build scalable Angular platforms for
                   complex product ecosystems and distributed engineering teams.
                 </p>
-                <p>
+                <p className="text-sm">
                   My role spans architecture design, technical standards,
                   hands-on implementation, and platform stabilization so teams
                   can deliver consistently at enterprise scale. This includes
@@ -122,12 +122,12 @@ export default function EnterpriseAngularDevelopmentPage() {
               </ServiceCard>
 
               <ServiceCard title="What's Included">
-                <p>
+                <p className="text-sm">
                   Enterprise frontend platforms often struggle with uneven
                   architecture, inconsistent patterns, and delivery bottlenecks
                   across multiple teams.
                 </p>
-                <p>
+                <p className="text-sm">
                   A structured platform engineering approach improves
                   maintainability, reduces technical debt, and enables faster,
                   predictable feature delivery.

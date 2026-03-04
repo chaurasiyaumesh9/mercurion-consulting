@@ -4,7 +4,7 @@ import {
   getBreadcrumbSchema,
   getServicePageSchema,
 } from "@/app/lib/structuredData";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceCard } from "../components/ServiceCard";
@@ -126,22 +126,46 @@ export default function AngularMigrationServicePage() {
                 business continuity while modernizing legacy AngularJS and
                 Angular 2+ platforms.
               </p>
+
               <ul className="space-y-2 text-sm text-gray-700">
-                <li>- Secure migration architecture for high-risk workflows</li>
-                <li>- Compliance-aware modernization for SOC 2 and PCI-DSS environments</li>
-                <li>- AngularJS to Angular 18 migration consultant guidance for phased rollout</li>
-                <li>- Angular 2 to Angular 18 upgrade planning with rollback safety</li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-slate-700 shrink-0 mt-0.5" />
+                  <span>
+                    Secure migration architecture for high-risk workflows
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-slate-700 shrink-0 mt-0.5" />
+                  <span>
+                    Compliance-aware modernization for SOC 2 and PCI-DSS
+                    environments
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-slate-700 shrink-0 mt-0.5" />
+                  <span>
+                    AngularJS to Angular 18 migration consultant guidance for
+                    phased rollout
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-slate-700 shrink-0 mt-0.5" />
+                  <span>
+                    Angular 2 to Angular 18 upgrade planning with rollback
+                    safety
+                  </span>
+                </li>
               </ul>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <ServiceCard title="What I Do">
-                <p>
+                <p className="text-sm">
                   I help enterprise engineering teams migrate AngularJS and
                   older Angular applications (v2+) to modern Angular 18
                   architectures using incremental, zero-downtime strategies.
                 </p>
-                <p>
+                <p className="text-sm">
                   My role spans technical audit, migration roadmap design,
                   hands-on execution, and performance stabilization — ensuring
                   modernization strengthens your architecture instead of
@@ -150,13 +174,13 @@ export default function AngularMigrationServicePage() {
               </ServiceCard>
 
               <ServiceCard title="What's Included">
-                <p>
+                <p className="text-sm">
                   Legacy Angular architectures increase release risk, slow
                   feature velocity, and create long-term technical debt.
                   Large-scale upgrades without structured planning can introduce
                   instability, regressions, and costly downtime.
                 </p>
-                <p>
+                <p className="text-sm">
                   A controlled, phased migration strategy allows teams to
                   modernize safely while maintaining production reliability and
                   protecting business continuity.
@@ -315,7 +339,10 @@ export default function AngularMigrationServicePage() {
                 Let's define a structured migration roadmap tailored to your
                 enterprise architecture.
               </p>
-              <Link href="/contact" className="bg-[#0066ff] hover:bg-[#0052cc] text-white px-8 py-3 rounded-lg inline-flex items-center gap-2 transition-colors shadow-lg">
+              <Link
+                href="/contact"
+                className="bg-[#0066ff] hover:bg-[#0052cc] text-white px-8 py-3 rounded-lg inline-flex items-center gap-2 transition-colors shadow-lg"
+              >
                 Discuss Your Migration
                 <ArrowRight className="w-5 h-5" />
               </Link>
