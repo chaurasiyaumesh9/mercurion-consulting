@@ -65,7 +65,7 @@ export default function BlogsPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-8 py-12">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <Link
               href="/blogs/migrate-angularjs-to-angular-18-2026-complete-guide"
               className="group h-full rounded-xl border border-gray-100 bg-white shadow-sm hover:border-gray-200 transition-colors"
@@ -149,6 +149,102 @@ export default function BlogsPage() {
                 <p className="text-gray-700 leading-relaxed">
                   Compare governance, architecture, and team productivity to
                   choose the right framework for your organization.
+                </p>
+              </div>
+              <div className="flex items-center justify-between border-t border-gray-200 px-6 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-full bg-white border border-gray-300 text-slate-700 text-xs font-medium flex items-center justify-center">
+                    MC
+                  </span>
+                  <span className="text-sm text-slate-700">Mercurion Team</span>
+                </div>
+                <span className="text-blue-700 text-sm font-medium">Mar 04, 2026</span>
+              </div>
+            </Link>
+
+            <Link
+              href="/blogs/core-web-vitals-optimization-angular-applications"
+              className="group h-full rounded-xl border border-gray-100 bg-white shadow-sm hover:border-gray-200 transition-colors"
+            >
+              <div className="p-8 min-h-[248px]">
+                <h2 className="text-[#1a2332] mb-4">
+                  Core Web Vitals optimization for Angular applications.
+                </h2>
+                <p className="text-gray-700 leading-relaxed">
+                  Improve LCP, INP, and CLS with practical diagnostics,
+                  implementation guidance, and production monitoring patterns.
+                </p>
+              </div>
+              <div className="flex items-center justify-between border-t border-gray-200 px-6 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-full bg-white border border-gray-300 text-slate-700 text-xs font-medium flex items-center justify-center">
+                    MC
+                  </span>
+                  <span className="text-sm text-slate-700">Mercurion Team</span>
+                </div>
+                <span className="text-blue-700 text-sm font-medium">Mar 04, 2026</span>
+              </div>
+            </Link>
+
+            <Link
+              href="/blogs/angular-migration-cost-2026-pricing-guide"
+              className="group h-full rounded-xl border border-gray-100 bg-white shadow-sm hover:border-gray-200 transition-colors"
+            >
+              <div className="p-8 min-h-[248px]">
+                <h2 className="text-[#1a2332] mb-4">
+                  How much does Angular migration cost in 2026?
+                </h2>
+                <p className="text-gray-700 leading-relaxed">
+                  Understand cost drivers, hidden effort areas, and budgeting
+                  frameworks for realistic migration planning.
+                </p>
+              </div>
+              <div className="flex items-center justify-between border-t border-gray-200 px-6 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-full bg-white border border-gray-300 text-slate-700 text-xs font-medium flex items-center justify-center">
+                    MC
+                  </span>
+                  <span className="text-sm text-slate-700">Mercurion Team</span>
+                </div>
+                <span className="text-blue-700 text-sm font-medium">Mar 04, 2026</span>
+              </div>
+            </Link>
+
+            <Link
+              href="/blogs/angular-signals-vs-ngrx-when-to-use-each"
+              className="group h-full rounded-xl border border-gray-100 bg-white shadow-sm hover:border-gray-200 transition-colors"
+            >
+              <div className="p-8 min-h-[248px]">
+                <h2 className="text-[#1a2332] mb-4">
+                  Angular Signals vs NgRx: when should you use each?
+                </h2>
+                <p className="text-gray-700 leading-relaxed">
+                  Choose the right state management strategy using complexity,
+                  governance, and team workflow criteria.
+                </p>
+              </div>
+              <div className="flex items-center justify-between border-t border-gray-200 px-6 py-4">
+                <div className="flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-full bg-white border border-gray-300 text-slate-700 text-xs font-medium flex items-center justify-center">
+                    MC
+                  </span>
+                  <span className="text-sm text-slate-700">Mercurion Team</span>
+                </div>
+                <span className="text-blue-700 text-sm font-medium">Mar 04, 2026</span>
+              </div>
+            </Link>
+
+            <Link
+              href="/blogs/case-study-migrating-500k-loc-angularjs-app-to-angular-18"
+              className="group h-full rounded-xl border border-gray-100 bg-white shadow-sm hover:border-gray-200 transition-colors"
+            >
+              <div className="p-8 min-h-[248px]">
+                <h2 className="text-[#1a2332] mb-4">
+                  Case study: migrating a 500K LOC AngularJS app to Angular 18.
+                </h2>
+                <p className="text-gray-700 leading-relaxed">
+                  See how phased execution, quality gates, and governance helped
+                  modernize a large codebase with controlled risk.
                 </p>
               </div>
               <div className="flex items-center justify-between border-t border-gray-200 px-6 py-4">
