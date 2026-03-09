@@ -2,6 +2,7 @@ import { Navigation } from "@/app/components/layout/Navigation";
 import { Breadcrumbs } from "@/app/components/ui/Breadcrumbs";
 import {
   getBreadcrumbSchema,
+  getHowToSchema,
   getServicePageSchema,
 } from "@/app/lib/structuredData";
 import { ArrowRight, Check } from "lucide-react";
@@ -80,6 +81,31 @@ export default function AngularMigrationServicePage() {
     "Expert AngularJS to Angular migration and enterprise Angular upgrade services",
     "https://mercurionconsulting.com/services/angular-migration-modernization",
   );
+
+  const howToSchema = getHowToSchema(
+    "How to Migrate from AngularJS to Angular 18",
+    "Step-by-step enterprise migration approach covering audit, phased execution, and stabilization.",
+    "https://mercurionconsulting.com/services/angular-migration-modernization",
+    [
+      {
+        name: "Technical Audit",
+        text: "Perform codebase, dependency, architecture, and risk analysis to define migration scope and constraints.",
+      },
+      {
+        name: "Migration Strategy",
+        text: "Create a phased migration roadmap aligned to release cycles, business priorities, and rollback safety.",
+      },
+      {
+        name: "Hands-on Execution",
+        text: "Implement incremental module migration and architecture refactoring with continuous production validation.",
+      },
+      {
+        name: "Stabilization and Optimization",
+        text: "Monitor production behavior, fix regressions, and optimize runtime performance and Core Web Vitals.",
+      },
+    ],
+  );
+
   return (
     <main className="min-h-screen bg-gray-50">
       <script
@@ -92,6 +118,12 @@ export default function AngularMigrationServicePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(howToSchema),
         }}
       />
       <Navigation />

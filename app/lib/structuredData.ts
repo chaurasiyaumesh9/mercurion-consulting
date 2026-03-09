@@ -257,3 +257,22 @@ export const getServicePageSchema = (
     serviceUrl: "https://mercurionconsulting.com",
   },
 });
+
+// Helper function for HowTo schema on implementation pages
+export const getHowToSchema = (
+  name: string,
+  description: string,
+  url: string,
+  steps: Array<{ name: string; text: string }>,
+) => ({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name,
+  description,
+  url,
+  step: steps.map((step) => ({
+    "@type": "HowToStep",
+    name: step.name,
+    text: step.text,
+  })),
+});
