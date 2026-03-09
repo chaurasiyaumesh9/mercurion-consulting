@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function ConsultingServices() {
@@ -58,7 +59,14 @@ export function ConsultingServices() {
               <div key={service.href} className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className={isReversed ? "md:order-2" : "md:order-1"}>
                   <div className="rounded-2xl overflow-hidden shadow-sm">
-                    <img src={service.image} loading="lazy" alt={service.title} className="w-full h-80 object-cover" />
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      width={1200}
+                      height={720}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="w-full h-80 object-cover"
+                    />
                   </div>
                 </div>
 

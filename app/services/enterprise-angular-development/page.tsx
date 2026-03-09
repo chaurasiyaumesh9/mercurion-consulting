@@ -2,6 +2,7 @@ import { Navigation } from "@/app/components/layout/Navigation";
 import { Breadcrumbs } from "@/app/components/ui/Breadcrumbs";
 import {
   getBreadcrumbSchema,
+  getHowToSchema,
   getServicePageSchema,
 } from "@/app/lib/structuredData";
 import { ArrowRight } from "lucide-react";
@@ -72,6 +73,30 @@ export default function EnterpriseAngularDevelopmentPage() {
     "https://mercurionconsulting.com/services/enterprise-angular-development",
   );
 
+  const howToSchema = getHowToSchema(
+    "How to Build a Scalable Enterprise Angular Platform",
+    "A practical implementation sequence for enterprise Angular architecture, platform standards, and execution.",
+    "https://mercurionconsulting.com/services/enterprise-angular-development",
+    [
+      {
+        name: "Architecture Discovery",
+        text: "Assess the current platform architecture, delivery constraints, team structure, and scaling risks.",
+      },
+      {
+        name: "Platform Blueprinting",
+        text: "Define module boundaries, architecture standards, shared conventions, and implementation priorities.",
+      },
+      {
+        name: "Hands-on Engineering",
+        text: "Implement scalable Angular capabilities with direct collaboration across product and engineering teams.",
+      },
+      {
+        name: "Stabilization and Handover",
+        text: "Embed governance, documentation, and operational standards for sustained platform quality.",
+      },
+    ],
+  );
+
   return (
     <main className="min-h-screen bg-gray-50">
       <script
@@ -84,6 +109,12 @@ export default function EnterpriseAngularDevelopmentPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(howToSchema),
         }}
       />
       <Navigation />

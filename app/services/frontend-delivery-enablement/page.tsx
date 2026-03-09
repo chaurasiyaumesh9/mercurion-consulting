@@ -2,6 +2,7 @@ import { Navigation } from "@/app/components/layout/Navigation";
 import { Breadcrumbs } from "@/app/components/ui/Breadcrumbs";
 import {
   getBreadcrumbSchema,
+  getHowToSchema,
   getServicePageSchema,
 } from "@/app/lib/structuredData";
 import { ArrowRight } from "lucide-react";
@@ -73,6 +74,30 @@ export default function FrontendDeliveryEnablementPage() {
     "https://mercurionconsulting.com/services/frontend-delivery-enablement",
   );
 
+  const howToSchema = getHowToSchema(
+    "How to Improve Frontend Delivery Reliability at Enterprise Scale",
+    "A phased approach for delivery diagnostics, platform standards, automation, and team enablement.",
+    "https://mercurionconsulting.com/services/frontend-delivery-enablement",
+    [
+      {
+        name: "Delivery Assessment",
+        text: "Evaluate release pipelines, workflow bottlenecks, and production reliability risks across teams.",
+      },
+      {
+        name: "Platform and Delivery Strategy",
+        text: "Define engineering standards, governance, CI/CD patterns, and release controls aligned to business goals.",
+      },
+      {
+        name: "Hands-on Enablement Execution",
+        text: "Implement tooling, automation, observability, and reliability improvements with engineering collaboration.",
+      },
+      {
+        name: "Team Enablement and Handover",
+        text: "Transfer practices and documentation so teams can sustain predictable, high-quality delivery.",
+      },
+    ],
+  );
+
   return (
     <main className="min-h-screen bg-gray-50">
       <script
@@ -85,6 +110,12 @@ export default function FrontendDeliveryEnablementPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(howToSchema),
         }}
       />
       <Navigation />

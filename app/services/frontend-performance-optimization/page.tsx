@@ -2,6 +2,7 @@ import { Navigation } from "@/app/components/layout/Navigation";
 import { Breadcrumbs } from "@/app/components/ui/Breadcrumbs";
 import {
   getBreadcrumbSchema,
+  getHowToSchema,
   getServicePageSchema,
 } from "@/app/lib/structuredData";
 import { ArrowRight } from "lucide-react";
@@ -73,6 +74,30 @@ export default function FrontendPerformanceServicePage() {
     "https://mercurionconsulting.com/services/frontend-performance-optimization",
   );
 
+  const howToSchema = getHowToSchema(
+    "How to Optimize Angular Frontend Performance for Enterprise Applications",
+    "A structured optimization workflow from telemetry analysis to rollout guardrails.",
+    "https://mercurionconsulting.com/services/frontend-performance-optimization",
+    [
+      {
+        name: "Real User Performance Analysis",
+        text: "Analyze Core Web Vitals and real user monitoring signals to find high-impact bottlenecks.",
+      },
+      {
+        name: "Code and Architecture Audit",
+        text: "Review rendering patterns, state flows, and asset delivery to prioritize optimization opportunities.",
+      },
+      {
+        name: "Hands-on Optimization",
+        text: "Implement production-safe improvements for bundle size, runtime responsiveness, and rendering efficiency.",
+      },
+      {
+        name: "Monitoring and Handover",
+        text: "Establish performance budgets, dashboards, and team workflows to prevent regressions.",
+      },
+    ],
+  );
+
   return (
     <main className="min-h-screen bg-gray-50">
       <script
@@ -85,6 +110,12 @@ export default function FrontendPerformanceServicePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(howToSchema),
         }}
       />
       <Navigation />
