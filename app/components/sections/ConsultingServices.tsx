@@ -71,7 +71,7 @@ export function ConsultingServices() {
                     <Link
                       href={service.href}
                       aria-label={service.ariaLabel}
-                      className="inline-block bg-blue-700 text-white px-8 py-3 rounded-md shadow-md hover:shadow-lg text-base font-medium hover:bg-blue-800 transition"
+                      className="inline-block bg-slate-800 text-white px-8 py-3 rounded-md shadow-md hover:shadow-lg text-base font-medium hover:bg-blue-800 transition"
                     >
                       Learn More
                     </Link>

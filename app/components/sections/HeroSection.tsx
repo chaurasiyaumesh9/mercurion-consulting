@@ -71,11 +71,13 @@ export default function HeroSection() {
           <div className="mt-4">
             <Link
               href="/contact"
-              className="inline-block bg-blue-700 text-white px-8 py-3 rounded-md shadow-md hover:shadow-lg text-base font-medium hover:bg-blue-800 transition"
+              className="inline-block bg-slate-800 text-white px-8 py-3 rounded-md text-base font-medium"
             >
               Schedule a Call
             </Link>
           </div>
+
+          <div className="border-b border-slate-300 py-2" />
 
           <div className="flex gap-4 pt-6">
             <Link
