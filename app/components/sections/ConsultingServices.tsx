@@ -64,14 +64,14 @@ export function ConsultingServices() {
 
                 <div className={isReversed ? "md:order-1" : "md:order-2"}>
                   <h3 className="text-xl text-slate-900">{service.title}</h3>
-                  <p className="mt-2 text-slate-700 text-[0.95rem] leading-relaxed">
+                  <p className="mt-2 text-slate-700 text-[1rem] leading-relaxed">
                     {service.description}
                   </p>
                   <div className="mt-6">
                     <Link
                       href={service.href}
                       aria-label={service.ariaLabel}
-                      className="inline-block bg-blue-700 text-white px-8 py-3 rounded-md shadow-md hover:shadow-lg text-base font-medium hover:bg-blue-800 transition"
+                      className="inline-block bg-slate-800 text-white px-8 py-3 rounded-md text-base font-medium"
                     >
                       Learn More
                     </Link>

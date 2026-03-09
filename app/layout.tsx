@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import {
   faqStructuredData,
@@ -13,7 +13,7 @@ import { BackToTop } from "./components/ui/BackToTop";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-const inter = Inter({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
@@ -134,7 +134,7 @@ export default function RootLayout({
             />
         )}
       </head>
-      <body className={inter.className}>
+      <body className={openSans.className}>
         {process.env.NODE_ENV === "production" && (
             <noscript>
                 <iframe

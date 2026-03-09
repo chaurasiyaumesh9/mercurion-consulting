@@ -54,10 +54,10 @@ export function Expertise() {
           {expertiseAreas.map((area) => (
             <div
               key={area.title}
-              className="group bg-white p-6 border border-slate-200 hover:bg-linear-to-br from-slate-900 to-blue-950 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              className="bg-white p-6 border border-slate-200 rounded-2xl shadow-sm"
             >
               <div className="flex items-center justify-center">
-                <h3 className="text-xl text-slate-900 text-center group-hover:text-white">
+                <h3 className="text-xl text-slate-900 text-center">
                   {area.title}
                 </h3>
               </div>
@@ -67,10 +67,10 @@ export function Expertise() {
               <ul className="space-y-2 md:space-y-2.5">
                 {area.items.map((item) => (
                   <li key={item} className="flex items-start gap-2 leading-relaxed">
-                    <span className="text-slate-700 group-hover:text-slate-200">
+                    <span className="text-slate-700">
                         <Check className="w-4 h-4 shrink-0 mt-0.75" />
                     </span>
-                    <span className="text-slate-700 text-[0.95rem] group-hover:text-slate-200">
+                    <span className="text-slate-700 text-[1rem]">
                       {item}
                     </span>
                   </li>

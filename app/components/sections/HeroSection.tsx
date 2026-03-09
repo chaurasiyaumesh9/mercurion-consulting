@@ -33,37 +33,37 @@ export default function HeroSection() {
           </p>
           <div className="border-b border-slate-300 py-2" />
 
-          <p className="mt-4 text-slate-700 leading-relaxed text-[0.95rem]">
+          <p className="mt-4 text-slate-700 text-[1rem]">
             I help engineering teams modernize legacy Angular applications, improve frontend
             performance, and deliver stable, production-ready features for enterprise web
             platforms.
           </p>
-          <p className="mt-4 text-slate-700 leading-relaxed text-[0.95rem]">
+          <p className="mt-4 text-slate-700 text-[1rem]">
             Specialized in Angular migrations, runtime performance optimization, large-scale feature
             delivery, and long-term maintenance of business-critical applications.
           </p>
 
-          <ul className="mt-4 space-y-1 text-slate-700 text-[0.95rem]">
-            <li className="flex items-start gap-3">
+          <ul className="mt-4 space-y-1 text-slate-700 text-[1rem]">
+            <li className="flex items-start gap-3 leading-relaxed">
                 <Check className="w-5 h-5 text-slate-700 shrink-0 mt-0.5" />
                 <span>10+ Years Frontend Engineering Experience</span>
             </li>
-            <li className="flex items-start gap-3">
+            <li className="flex items-start gap-3 leading-relaxed">
                 <Check className="w-5 h-5 text-slate-700 shrink-0 mt-0.5" />
                 <span>Enterprise Production Systems</span>
             </li>
-            <li className="flex items-start gap-3">
+            <li className="flex items-start gap-3 leading-relaxed">
                 <Check className="w-5 h-5 text-slate-700 shrink-0 mt-0.5" />
                 <span>Distributed and Global Team Collaboration</span>
             </li>
           </ul>
 
-          <p className="mt-4 text-slate-700 text-[0.95rem]">
+          <p className="mt-4 text-slate-700 text-[1rem]">
             Available for hire as a Senior Angular Consultant, Enterprise Angular Developer, or
             Frontend Architecture Consultant through remote consulting and contract engagements.
           </p>
 
-          <div className="mt-4 text-slate-600 text-sm flex items-center gap-1">
+          <div className="mt-4 text-slate-600 text-[1rem] flex items-center gap-1">
             <MapPin size={20} />
             <span>Available for remote opportunities</span>
           </div>
@@ -71,11 +71,13 @@ export default function HeroSection() {
           <div className="mt-4">
             <Link
               href="/contact"
-              className="inline-block bg-blue-700 text-white px-8 py-3 rounded-md shadow-md hover:shadow-lg text-base font-medium hover:bg-blue-800 transition"
+              className="inline-block bg-slate-800 text-white px-8 py-3 rounded-md text-base font-medium"
             >
               Schedule a Call
             </Link>
           </div>
+
+          <div className="border-b border-slate-300 py-2" />
 
           <div className="flex gap-4 pt-6">
             <Link
