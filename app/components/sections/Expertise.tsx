@@ -70,7 +70,7 @@ export function Expertise() {
                     <span className="text-slate-700">
                         <Check className="w-4 h-4 shrink-0 mt-0.75" />
                     </span>
-                    <span className="text-slate-700 text-[0.95rem]">
+                    <span className="text-slate-700 text-[1rem]">
                       {item}
                     </span>
                   </li>

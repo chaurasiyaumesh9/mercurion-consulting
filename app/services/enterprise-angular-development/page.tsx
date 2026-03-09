@@ -7,6 +7,7 @@ import {
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { RelatedServices } from "../components/RelatedServices";
 import { ServiceCard } from "../components/ServiceCard";
 
 export const metadata: Metadata = {
@@ -108,11 +109,11 @@ export default function EnterpriseAngularDevelopmentPage() {
           <div className="max-w-7xl mx-auto px-6 py-12">
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <ServiceCard title="What I Do">
-                <p className="text-sm">
+                <p className="text-[1rem]">
                   I help organizations build scalable Angular platforms for
                   complex product ecosystems and distributed engineering teams.
                 </p>
-                <p className="text-sm">
+                <p className="text-[1rem]">
                   My role spans architecture design, technical standards,
                   hands-on implementation, and platform stabilization so teams
                   can deliver consistently at enterprise scale. This includes
@@ -122,15 +123,23 @@ export default function EnterpriseAngularDevelopmentPage() {
               </ServiceCard>
 
               <ServiceCard title="What's Included">
-                <p className="text-sm">
+                <p className="text-[1rem]">
                   Enterprise frontend platforms often struggle with uneven
                   architecture, inconsistent patterns, and delivery bottlenecks
                   across multiple teams.
                 </p>
-                <p className="text-sm">
+                <p className="text-[1rem]">
                   A structured platform engineering approach improves
                   maintainability, reduces technical debt, and enables faster,
-                  predictable feature delivery.
+                  predictable feature delivery. Teams often strengthen this by
+                  adding{" "}
+                  <Link
+                    href="/services/frontend-delivery-enablement"
+                    className="text-slate-800 underline decoration-slate-400 underline-offset-4 hover:decoration-slate-700"
+                  >
+                    frontend delivery enablement consulting
+                  </Link>{" "}
+                  for governance and release quality.
                 </p>
               </ServiceCard>
 
@@ -140,7 +149,7 @@ export default function EnterpriseAngularDevelopmentPage() {
                     <h3 className="text-[#1a2332] mb-2">
                       Enterprise Angular Application Architecture
                     </h3>
-                    <p className="text-sm">
+                    <p className="text-[1rem]">
                       Scalable architecture design for large product suites and
                       mission-critical frontend workflows.
                     </p>
@@ -150,7 +159,7 @@ export default function EnterpriseAngularDevelopmentPage() {
                     <h3 className="text-[#1a2332] mb-2">
                       Platform Engineering & Standards
                     </h3>
-                    <p className="text-sm">
+                    <p className="text-[1rem]">
                       Shared conventions, code quality standards, and modular
                       patterns for multi-team velocity.
                     </p>
@@ -160,7 +169,7 @@ export default function EnterpriseAngularDevelopmentPage() {
                     <h3 className="text-[#1a2332] mb-2">
                       State Management at Scale
                     </h3>
-                    <p className="text-sm">
+                    <p className="text-[1rem]">
                       Robust state architecture for complex enterprise
                       interactions and high-volume data flows.
                     </p>
@@ -170,7 +179,7 @@ export default function EnterpriseAngularDevelopmentPage() {
                     <h3 className="text-[#1a2332] mb-2">
                       UI Platform & Component Strategy
                     </h3>
-                    <p className="text-sm">
+                    <p className="text-[1rem]">
                       Enterprise component foundations that improve consistency
                       and reduce implementation overhead.
                     </p>
@@ -180,7 +189,7 @@ export default function EnterpriseAngularDevelopmentPage() {
                     <h3 className="text-[#1a2332] mb-2">
                       Scalability & Performance Engineering
                     </h3>
-                    <p className="text-sm">
+                    <p className="text-[1rem]">
                       Architecture and runtime optimization to support growth,
                       reliability, and frontend resilience.
                     </p>
@@ -190,7 +199,7 @@ export default function EnterpriseAngularDevelopmentPage() {
                     <h3 className="text-[#1a2332] mb-2">
                       Team Enablement & Governance
                     </h3>
-                    <p className="text-sm">
+                    <p className="text-[1rem]">
                       Documentation, working models, and mentoring that let
                       teams scale independently.
                     </p>
@@ -204,7 +213,7 @@ export default function EnterpriseAngularDevelopmentPage() {
                     <h4 className="text-[#1a2332] mb-1">
                       1. Architecture Discovery
                     </h4>
-                    <p className="text-sm">
+                    <p className="text-[1rem]">
                       Assess current platform structure, delivery constraints,
                       and scaling risks.
                     </p>
@@ -214,7 +223,7 @@ export default function EnterpriseAngularDevelopmentPage() {
                     <h4 className="text-[#1a2332] mb-1">
                       2. Platform Blueprinting
                     </h4>
-                    <p className="text-sm">
+                    <p className="text-[1rem]">
                       Define architecture, module boundaries, engineering
                       standards, and implementation priorities.
                     </p>
@@ -224,7 +233,7 @@ export default function EnterpriseAngularDevelopmentPage() {
                     <h4 className="text-[#1a2332] mb-1">
                       3. Hands-on Engineering
                     </h4>
-                    <p className="text-sm">
+                    <p className="text-[1rem]">
                       Collaborate directly with teams to ship scalable Angular
                       capabilities and improve architecture quality.
                     </p>
@@ -234,7 +243,7 @@ export default function EnterpriseAngularDevelopmentPage() {
                     <h4 className="text-[#1a2332] mb-1">
                       4. Stabilization & Handover
                     </h4>
-                    <p className="text-sm">
+                    <p className="text-[1rem]">
                       Embed standards, documentation, and governance for
                       sustained long-term platform performance.
                     </p>
@@ -248,7 +257,7 @@ export default function EnterpriseAngularDevelopmentPage() {
               <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
                 <div>
                   <h3 className="text-[#1a2332] mb-2">Faster Delivery</h3>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-[1rem] text-gray-700">
                     Platform consistency that accelerates multi-team feature
                     development.
                   </p>
@@ -256,7 +265,7 @@ export default function EnterpriseAngularDevelopmentPage() {
 
                 <div>
                   <h3 className="text-[#1a2332] mb-2">Reduced Tech Debt</h3>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-[1rem] text-gray-700">
                     Standardized architecture that lowers maintenance burden and
                     rework.
                   </p>
@@ -264,7 +273,7 @@ export default function EnterpriseAngularDevelopmentPage() {
 
                 <div>
                   <h3 className="text-[#1a2332] mb-2">Scalable Foundation</h3>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-[1rem] text-gray-700">
                     Enterprise-ready frontend platform built for long-term
                     growth.
                   </p>
@@ -276,16 +285,46 @@ export default function EnterpriseAngularDevelopmentPage() {
               <h2 className="text-[#1a2332] mb-6">
                 Remote Enterprise Angular Architecture Support
               </h2>
-              <p className="text-sm text-gray-700 leading-relaxed">
+              <p className="text-[1rem] text-gray-700 leading-relaxed">
                 If you need to hire a remote Angular consultant for enterprise
                 platform work, I collaborate with engineering leaders across US,
                 UK, and Europe to define architecture standards, reduce
                 cross-team drift, and improve delivery throughput without
-                forcing a full platform rewrite.
+                forcing a full platform rewrite. I also support{" "}
+                <Link
+                  href="/services/angular-migration-modernization"
+                  className="text-slate-800 underline decoration-slate-400 underline-offset-4 hover:decoration-slate-700"
+                >
+                  Angular migration and modernization projects
+                </Link>{" "}
+                where platform scalability is a core requirement.
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-[#1a2332] to-[#2a3f5f] rounded-xl p-12 text-center text-white">
+            <RelatedServices
+              services={[
+                {
+                  href: "/services/angular-migration-modernization",
+                  title: "Angular Migration & Modernization",
+                  description:
+                    "Migrate legacy AngularJS and older Angular stacks with controlled rollouts.",
+                },
+                {
+                  href: "/services/frontend-performance-optimization",
+                  title: "Frontend Performance Optimization",
+                  description:
+                    "Improve load, interaction speed, and Core Web Vitals for enterprise apps.",
+                },
+                {
+                  href: "/services/frontend-delivery-enablement",
+                  title: "Frontend Delivery & Enablement",
+                  description:
+                    "Increase release velocity with stable CI/CD and team-aligned standards.",
+                },
+              ]}
+            />
+
+            <div className="bg-linear-to-br from-[#1a2332] to-[#2a3f5f] rounded-xl p-12 text-center text-white">
               <h2 className="text-white mb-3">
                 Need Enterprise Angular Engineering Support?
               </h2>
