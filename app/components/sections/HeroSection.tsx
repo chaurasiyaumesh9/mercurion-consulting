@@ -68,12 +68,20 @@ export default function HeroSection() {
             <span>Available for remote opportunities</span>
           </div>
 
-          <div className="mt-4">
+          <div className="mt-4 flex flex-wrap items-center gap-3">
             <Link
               href="/contact"
-              className="inline-block bg-slate-800 text-white px-8 py-3 rounded-md text-base font-medium"
+              className="inline-block border border-slate-300 text-slate-800 px-8 py-3 rounded-md text-base font-medium hover:bg-slate-100 transition"              
             >
               Schedule a Call
+            </Link>
+            <Link
+              href="/Umesh-Chaurasiya-CV.pdf"
+              className="inline-block bg-slate-800 text-white px-8 py-3 rounded-md text-base font-medium"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download CV
             </Link>
           </div>
 
